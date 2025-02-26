@@ -2,9 +2,9 @@
     const response = await fetch('https://forecast-docs.metoceanapi.comhttps://forecast-docs.metoceanapi.com');
     const weather = await response.json();
     return {weather};
-}*/
+}
 // USE TOMTOM FOR API'S, SWITCH CODE AROUND TO FIT TRAFFIC API, CREATE PAGE FOR TRAFFIC DATA, INCLUDING DROP DOWN MENU/ACCORDIANS
-et url = 'https://forecast-v2.metoceanapi.com/point/time'
+let url = 'https://forecast-v2.metoceanapi.com/point/time'
 
 // This is a very simple request, with no post-processing in this example
 let data = {
@@ -17,4 +17,4 @@ let data = {
   }
 }
 
-export let pointTime = { url, data }
+export let pointTime = { url, data }*/
