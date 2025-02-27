@@ -1,22 +1,27 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
+  let data = null;
+  let loading = true;
 
-  onMount(() => {
-    window.initMap = function () {
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: { lat: 34.04924594193164, lng: -118.24104309082031 },
-      });
-      const trafficLayer = new google.maps.TrafficLayer();
-      trafficLayer.setMap(map);
-    };
-
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=traffic&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+  const apiUrl = 'https://api.openweathermap.org/data/2.5/roadrisk?appid=b57a015615786b95e362a61f15e82bc8';
+  onMount(async () => {
+    const response = await fetch(apiUrl);
+    data = await response.json();
+    loading = false;
   });
 </script>
 
-<div id="map" style="height: 500px;"></div>
+<main>
+  {#if loading}
+    <p>Loading...</p>
+  {:else}
+    <pre>{JSON.stringify(data, null, 2)}</pre>
+  {/if}
+</main>
+
+<style>
+  main {
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+  }
+</style>
