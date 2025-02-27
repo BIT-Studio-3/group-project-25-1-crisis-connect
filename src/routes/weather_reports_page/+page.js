@@ -18,3 +18,14 @@ let data = {
 }
 
 export let pointTime = { url, data }*/
+
+const apiKey = "b3701e9be3304a7a930222848252702";
+
+export async function load({ fetch }){
+  
+  const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=b3701e9be3304a7a930222848252702&q=London&aqi=no`);
+  
+    const weather = await response.json();
+  return {weather};
+
+}
