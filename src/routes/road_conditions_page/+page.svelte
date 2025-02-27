@@ -1,20 +1,22 @@
 <script>
-    
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    window.initMap = function () {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: { lat: 34.04924594193164, lng: -118.24104309082031 },
+      });
+      const trafficLayer = new google.maps.TrafficLayer();
+      trafficLayer.setMap(map);
+    };
+
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=traffic&callback=initMap`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  });
 </script>
-=======
-<!-- svelte-ignore a11y-missing-attribute -->
-<html>
-  <head>
-    <title>Simple Map</title>
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <div id="map"></div>
-
-    <!-- prettier-ignore -->
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
-  </body>
-</html>
+<div id="map" style="height: 500px;"></div>
