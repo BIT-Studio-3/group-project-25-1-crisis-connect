@@ -1,9 +1,10 @@
 <script>
+    import Navigation from "$lib/Navigation.svelte";
 </script>
 
 <header>
-    <h1><a href="/">The GPTs Disaster Management System</a></h1>
-<Navigation/>
+    <h1><a href="/">Crisis Connect</a></h1>
+<Navigation />
    
 </header>
 
