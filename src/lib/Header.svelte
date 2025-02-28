@@ -3,8 +3,12 @@
 </script>
 
 <header>
-    <h1><a href="/">Crisis Connect</a></h1>
-<Navigation />
+    <div class="box">
+        <h1><a href="/">Crisis Connect</a></h1>
+    </div>
+    
+
+    <Navigation />
    
 </header>
 
@@ -37,6 +41,12 @@
         padding: 2em;
         margin-bottom: 0.5em;
         box-sizing: border-box;
+    }
+    .box{
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+        text-align: right;
     }
 
     /*nav {
