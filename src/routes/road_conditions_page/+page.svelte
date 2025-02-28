@@ -1,27 +1,37 @@
 <script>
-  import { onMount } from 'svelte';
-  let data = null;
-  let loading = true;
+  //I have downloaded the dependencies of leaflet using
+  //npm install leaflet in the git bash
+  //Importing leaflet 'L' from the downloaded dependency with its css
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+//Import the onMount function from the Svelte
+  import { onMount } from "svelte";
+  //Declaring the 'let' variable to hold reference of the map container 
+  let mapContainer;
+  //Ensure it runs after the component is mounted in DOM
+  onMount(() => {
+    //Ive set the view to show the polytechnic
+    const map = L.map(mapContainer).setView([-45.865963211874174, 170.5189969281258], 13);
 
-  const apiUrl = 'https://api.openweathermap.org/data/2.5/roadrisk?appid=b57a015615786b95e362a61f15e82bc8';
-  onMount(async () => {
-    const response = await fetch(apiUrl);
-    data = await response.json();
-    loading = false;
+    // Adding OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Add a marker which pops up when u click on the marker
+    L.marker([-45.865963211874174, 170.5189969281258]).addTo(map)
+      .bindPopup("You are here :)")
+      .openPopup();
   });
 </script>
 
-<main>
-  {#if loading}
-    <p>Loading...</p>
-  {:else}
-    <pre>{JSON.stringify(data, null, 2)}</pre>
-  {/if}
-</main>
-
 <style>
-  main {
-    font-family: Arial, sans-serif;
-    padding: 1rem;
+  #map {
+    text-align: center;
+    width: 100%;
+    height: 800px;
   }
 </style>
+<section>
+<div id="map" bind:this={mapContainer}></div>
+</section>
