@@ -1,5 +1,4 @@
 <script>
-    import Navigation from "$lib/Navigation.svelte";
 </script>
 
 <div class="PageContentContainer">
