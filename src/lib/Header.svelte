@@ -1,18 +1,31 @@
 <script>
-    import Navigation from "$lib/Navigation.svelte";
+    import { page } from "$app/stores";
+
+    $: route = $page.route.id;
 </script>
 
 <header>
-    <div class="box">
-        <h1><a href="/">Crisis Connect</a></h1>
-    </div>
-  
-    <Navigation />
-  
+    <h1><a href="/">The GPTs Disaster Management System</a></h1>
+
+    <!--<nav>
+        <ul>
+            <a href="/weather_reports_page" class="firstrow"><li class:active={route === "/weather_reports_page"}>Weather Reports</li></a>
+            <a href="/seismic_reports_page" class="firstrow"><li class:active={route === "/seismic_reports_page"}>Seismic Activity</li></a>
+            <a href="/road_conditions_page" class="firstrow"><li class:active={route === "/road_conditions_page"}>Road Conditions</li></a>
+            <a href="/volcanic_activity_page" class="secondrow"><li class:active={route === "/volcanic_activity_page"}>Volcanic Activity</li></a>
+            <a href="/fire_and_emergency_page" class="secondrow"><li class:active={route === "/fire_and_emergency_page"}>Fire and Emergency Reports</li></a>
+            <a href="/rss" class="secondrow"><li class:active={route === "/rss"}>RSS Feed</li></a>
+            <a href="/alert_system" class="secondrow"><li class:active={route === "/alert_system"}>Post an Alert</li></a>
+            <a href="/contact_page" class="secondrow">Contact</a>
+        </ul>
+    </nav>-->
+    
+   
 </header>
 
  
 <style>
+
     a {
         text-decoration: none;
         background-color: inherit;
@@ -41,14 +54,8 @@
         margin-bottom: 0.5em;
         box-sizing: border-box;
     }
-    .box{
-        display: flex;
-        justify-content: left;
-        flex-direction: row;
-        text-align: right;
-    }
 
-    /*nav {
+    nav {
         display: flex;
         flex-direction: row;
     }
@@ -102,6 +109,6 @@
             font-size: 70%;
         }
     }
-*/
+
 
 </style>

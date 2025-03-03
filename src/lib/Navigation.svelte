@@ -1,43 +1,37 @@
 <script>
-  
+    import logo from "$lib/routes/contact_page/page.svelte";
 </script>
 
-<section>
-    <!--This will be a drop down menu that will decend on click or mouse hover (Live Data)-->
-        <nav><h1>Live Data</h1><br>         
-            <li><a href="/weather_reports_page">Weather Reports</a></li>
-            <li><a href="/seismic_reports_page">Seismic Activity</a></li>
-            <li><a href="/road_conditions_page"> Road Conditions</a></li>
-            <li><a href="/volcanic_activity_page">Volcanic Activity</a></li>
-            <li><a href="/fire_and_emergency_page" >Fire and Emergency Reports</a></li>
-            <li><a href="/rss">RSS Feed</a></li>
-            <li><a href="/alert_system" >Post an Alert!!!</a></li>      
-        </nav>
-</section>
-
-<section>
-    <!--This will be a drop down menu that will decend on click or mouse hover (Contact)-->
-        <nav><h1>Contact</h1><br>
-            <li>Contact services</li>
-            <li>Contact us "the developers"</li>
-            <li>Group communication</li>        <!--Just an idea for a feature-->
-            <li>Location based live chatt</li>  <!--Also a possible feature idea-->
-        </nav>
-</section>
-
+<nav>    
+   <ul>
+       <li> 
+           <!--<img src={} alt="" class="" >-->           
+           <a href="/contact_page"> Contact services</a>   
+       </li>
+   </ul>
+</nav>
 
 <style>
-    /*.box{
-        display: flex;
-        justify-content: flex-start;
-        gap: 20px;
-        align-items: center;
-    }*/
-    a {
-        
-        text-decoration: none;
-    }
-    li{
-        list-style: none;
-    }
+   a {
+       text-decoration: none;
+       color: #d7e427;
+       font-weight: bold;
+       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+       font-size:x-large;
+   }
+   li {
+       display: flex;
+       align-items: center;
+       list-style: none;
+       padding: 0.5em 1em;
+       margin: 0.5em 1em;
+   }
+   ul {
+       display: flex;
+       margin-right: 300px;
+       gap: 0px;
+       flex-direction: row;     
+       background-color: #000000;
+   }
+   
 </style>
