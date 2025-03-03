@@ -6,14 +6,13 @@
     <div class="box">
         <h1><a href="/">Crisis Connect</a></h1>
     </div>
-    
-
+  
     <Navigation />
-   
+  
 </header>
 
+ 
 <style>
-
     a {
         text-decoration: none;
         background-color: inherit;
