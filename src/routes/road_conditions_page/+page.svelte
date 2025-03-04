@@ -1,20 +1,37 @@
 <script>
-    
+  //I have downloaded the dependencies of leaflet using
+  //npm install leaflet in the git bash
+  //Importing leaflet 'L' from the downloaded dependency with its css
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+//Import the onMount function from the Svelte
+  import { onMount } from "svelte";
+  //Declaring the 'let' variable to hold reference of the map container
+  let mapContainer;
+  //Ensure it runs after the component is mounted in DOM
+  onMount(() => {
+    //Ive set the view to show the polytechnic
+    const map = L.map(mapContainer).setView([-45.865963211874174, 170.5189969281258], 13);
+ 
+    // Adding OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+ 
+    // Add a marker which pops up when u click on the marker
+    L.marker([-45.865963211874174, 170.5189969281258]).addTo(map)
+      .bindPopup("You are here :)")
+      .openPopup();
+  });
 </script>
-=======
-<!-- svelte-ignore a11y-missing-attribute -->
-<html>
-  <head>
-    <title>Simple Map</title>
-
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <div id="map"></div>
-
-    <!-- prettier-ignore -->
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
-  </body>
-</html>
+ 
+<style>
+  #map {
+    text-align: center;
+    width: 100%;
+    height: 800px;
+  }
+</style>
+<section>
+<div id="map" bind:this={mapContainer}></div>
+</section>
