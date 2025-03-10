@@ -26,20 +26,19 @@
         background-color: #f1f1f1;
         position: fixed;
         height : 100%;
-        overflow: auto;
-
-
+       overflow: auto; 
     }
-  /*.box{
+    li {
+      list-style: none;
+    }
+    /*.box{
         display: flex;
         justify-content: flex-start;
         gap: 20px;
         align-items: center;
     }
-  a {
-    text-decoration: none;
-  }
-  li {
-    list-style: none;
-  } */
+    a {
+        text-decoration: none;
+    }
+    */
 </style>
