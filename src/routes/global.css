@@ -1,0 +1,10 @@
+body{
+    background-image: url('../Images/bg.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Use white text for better contrast */
+  }
