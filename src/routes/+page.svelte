@@ -12,7 +12,7 @@
 
     <figure class="pinmap">
         <h3>Active Disasters</h3>
-        <img src="src\lib\Images\New_Zealand_Regions.png" alt="A map of New Zealand">
+        <img src=".\Images\New_Zealand_Regions.png" alt="A map of New Zealand">
     </figure>
     
 </div>
