@@ -1,141 +1,143 @@
 <script>
+
 </script>
 
-<div class="box">
-    <h1>Emergency Services</h1><br>
-    <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
-    <div class="box2">
-        <h4>Click here to register</h4>
-    </div>
-    <div class="box3">
-        <h4>Download an offline safe copy</h4> 
-    </div>
-</div>
+<section>
+    <article class="box">
+        <h1>Emergency Services</h1><br>
+        <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
+        <div class="box2">
+            <h4>Click here to register</h4>
+        </div>
+        <div class="box3">
+            <a href="/contact_page.pdf" download="Services.pdf">Download </a>
+        </div>
+    </article>
 
-<div class="container">
-    <h2>The Police</h2><br>
-    <ul>
-        <li>Region: Nelson-Tasman</li>
-        <li>Name: Gerald Targaryen</li>
-        <li>Role: chief of police</li>
-        <li>Email: *********</li>
-        <li>Work phone: ********</li>
-        <li>Cell phone: ********</li>
-        <li>Address: *******</li>
-        <li>Radio channel: N/A</li>
-    </ul><br>
-    <ul>
-        <li>Region: Nelson-Tasman</li>
-        <li>Name: Gerald Targaryen</li>
-        <li>Role: chief of police</li>
-        <li>Email: *********</li>
-        <li>Work phone: ********</li>
-        <li>Cell phone: ********</li>
-        <li>Address: *******</li>
-        <li>Radio channel: N/A</li>
-    </ul><br>
-    <ul>
-        <li>Region: Nelson-Tasman</li>
-        <li>Name: Gerald Targaryen</li>
-        <li>Role: chief of police</li>
-        <li>Email: *********</li>
-        <li>Work phone: ********</li>
-        <li>Cell phone: ********</li>
-        <li>Address: *******</li>
-        <li>Radio channel: N/A</li>
-    </ul>
-</div>
+    <article class="container">
+        <h2>The Police</h2><br>
+        <ul>
+            <li>Region: Nelson-Tasman</li>
+            <li>Name: Gerald Targaryen</li>
+            <li>Role: chief of police</li>
+            <li>Email: *********</li>
+            <li>Work phone: ********</li>
+            <li>Cell phone: ********</li>
+            <li>Address: *******</li>
+            <li>Radio channel: N/A</li>
+        </ul><br>
+        <ul>
+            <li>Region: Nelson-Tasman</li>
+            <li>Name: Gerald Targaryen</li>
+            <li>Role: chief of police</li>
+            <li>Email: *********</li>
+            <li>Work phone: ********</li>
+            <li>Cell phone: ********</li>
+            <li>Address: *******</li>
+            <li>Radio channel: N/A</li>
+        </ul><br>
+        <ul>
+            <li>Region: Nelson-Tasman</li>
+            <li>Name: Gerald Targaryen</li>
+            <li>Role: chief of police</li>
+            <li>Email: *********</li>
+            <li>Work phone: ********</li>
+            <li>Cell phone: ********</li>
+            <li>Address: *******</li>
+            <li>Radio channel: N/A</li>
+        </ul>
+    </article>
 
-<div class="container">
-    <h2>Fire and Emergency</h2><br>
-    <ul>
-        <li>Region: Otago</li>
-        <li>Name: Spencer Williams</li>
-        <li>Role: Rescue Fire and Safety Officer</li>
-        <li>Email: </li>
-        <li>Work phone: 03777555</li>
-        <li>Cell phone: "Hidden"</li>
-        <li>Address: "Hidden"</li>
-        <li>Radio channel: *****</li>
-    </ul><br>
-    <ul>
-        <li>Name: Spencer Williams</li>
-        <li>Role: Rescue Fire and Safety Officer</li>
-        <li>Email: </li>
-        <li>Work phone: 03777555</li>
-        <li>Cell phone: "Hidden"</li>
-        <li>Address: "Hidden"</li>
-    </ul><br>
-    <ul>
-        <li>Name: Spencer Williams</li>
-        <li>Role: Rescue Fire and Safety Officer</li>
-        <li>Email: </li>
-        <li>Work phone: 03777555</li>
-        <li>Cell phone: "Hidden"</li>
-        <li>Address: "Hidden"</li>
-    </ul>
-</div>
+    <article class="container">
+        <h2>Fire and Emergency</h2><br>
+        <ul>
+            <li>Region: Otago</li>
+            <li>Name: Spencer Williams</li>
+            <li>Role: Rescue Fire and Safety Officer</li>
+            <li>Email: </li>
+            <li>Work phone: 03777555</li>
+            <li>Cell phone: "Hidden"</li>
+            <li>Address: "Hidden"</li>
+            <li>Radio channel: *****</li>
+        </ul><br>
+        <ul>
+            <li>Name: Spencer Williams</li>
+            <li>Role: Rescue Fire and Safety Officer</li>
+            <li>Email: </li>
+            <li>Work phone: 03777555</li>
+            <li>Cell phone: "Hidden"</li>
+            <li>Address: "Hidden"</li>
+        </ul><br>
+        <ul>
+            <li>Name: Spencer Williams</li>
+            <li>Role: Rescue Fire and Safety Officer</li>
+            <li>Email: </li>
+            <li>Work phone: 03777555</li>
+            <li>Cell phone: "Hidden"</li>
+            <li>Address: "Hidden"</li>
+        </ul>
+    </article>
 
-<div class="container">
-    <h2>Civil defence</h2><br>
-    <ul>
-        <li>Region: Cantabury</li>
-        <li>Name: Lois Parker</li>
-        <li>Role: Team Leader</li>
-        <li>Email: </li>
-        <li>Work phone: "Hidden"</li>
-        <li>Cell phone: 025 787 989</li>
-        <li>Address: "Hidden"</li>
-        <li>Radio channel: *****</li>
-    </ul><br>
-    <ul>
-        <li>Name: Lois Parker</li>
-        <li>Role: Team Leader</li>
-        <li>Email: </li>
-        <li>Work phone: "Hidden"</li>
-        <li>Cell phone: 025 787 989</li>
-        <li>Address: "Hidden"</li>
-    </ul><br>
-    <ul>
-        <li>Name: Lois Parker</li>
-        <li>Role: Team Leader</li>
-        <li>Email: </li>
-        <li>Work phone: "Hidden"</li>
-        <li>Cell phone: 025 787 989</li>
-        <li>Address: "Hidden"</li>
-    </ul>
-</div>
+    <article class="container">
+        <h2>Civil defence</h2><br>
+        <ul>
+            <li>Region: Cantabury</li>
+            <li>Name: Lois Parker</li>
+            <li>Role: Team Leader</li>
+            <li>Email: </li>
+            <li>Work phone: "Hidden"</li>
+            <li>Cell phone: 025 787 989</li>
+            <li>Address: "Hidden"</li>
+            <li>Radio channel: *****</li>
+        </ul><br>
+        <ul>
+            <li>Name: Lois Parker</li>
+            <li>Role: Team Leader</li>
+            <li>Email: </li>
+            <li>Work phone: "Hidden"</li>
+            <li>Cell phone: 025 787 989</li>
+            <li>Address: "Hidden"</li>
+        </ul><br>
+        <ul>
+            <li>Name: Lois Parker</li>
+            <li>Role: Team Leader</li>
+            <li>Email: </li>
+            <li>Work phone: "Hidden"</li>
+            <li>Cell phone: 025 787 989</li>
+            <li>Address: "Hidden"</li>
+        </ul>
+    </article>
 
-<div class="container">
-    <h2>Saint Johns</h2><br>
-    <ul>
-        <li>Region: Southland</li>
-        <li>Name: Sally Duns</li>
-        <li>Role: Nurse</li>
-        <li>Email: Sally.Duns@mailfence.com</li>
-        <li>Work phone: "Hidden"</li>
-        <li>Cell phone: "Hidden"</li>
-        <li>Address: "Hidden"</li>
-        <li>Radio channel: *****</li> 
-    </ul><br>
-    <ul>
-        <li>Name: Sally Duns</li>
-        <li>Role: Nurse</li>
-        <li>Email: Sally.Duns@mailfence.com</li>
-        <li>Work phone: "Hidden"</li>
-        <li>Cell phone: "Hidden"</li>
-        <li>Address: "Hidden"</li>
-    </ul><br>
-    <ul>
-        <li>Name: Sally Duns</li>
-        <li>Role: Nurse</li>
-        <li>Email: Sally.Duns@mailfence.com</li>
-        <li>Work phone: "Hidden"</li>
-        <li>Cell phone: "Hidden"</li>
-        <li>Address: "Hidden"</li>
-    </ul>
-</div>
-
+    <article class="container">
+        <h2>Saint Johns</h2><br>
+        <ul>
+            <li>Region: Southland</li>
+            <li>Name: Sally Duns</li>
+            <li>Role: Nurse</li>
+            <li>Email: Sally.Duns@mailfence.com</li>
+            <li>Work phone: "Hidden"</li>
+            <li>Cell phone: "Hidden"</li>
+            <li>Address: "Hidden"</li>
+            <li>Radio channel: *****</li> 
+        </ul><br>
+        <ul>
+            <li>Name: Sally Duns</li>
+            <li>Role: Nurse</li>
+            <li>Email: Sally.Duns@mailfence.com</li>
+            <li>Work phone: "Hidden"</li>
+            <li>Cell phone: "Hidden"</li>
+            <li>Address: "Hidden"</li>
+        </ul><br>
+        <ul>
+            <li>Name: Sally Duns</li>
+            <li>Role: Nurse</li>
+            <li>Email: Sally.Duns@mailfence.com</li>
+            <li>Work phone: "Hidden"</li>
+            <li>Cell phone: "Hidden"</li>
+            <li>Address: "Hidden"</li>
+        </ul>
+    </article>
+</section>
 <style>
     .container{
         border: 2px solid #2fd6ce;
