@@ -1,8 +1,15 @@
 <script>
+  function openNav() {
+  document.getElementById("Sidenav").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("Sidenav").style.width = "0";
+}
 </script>
 
 <section>
-  <nav>
+  <nav id ="Sidenav">
+    <a href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</a>
     <li><a href="/weather_reports_page">Weather Reports</a></li>
     <li><a href="/seismic_reports_page">Seismic Activity</a></li>
     <li><a href="/road_conditions_page"> Road Conditions</a></li>
