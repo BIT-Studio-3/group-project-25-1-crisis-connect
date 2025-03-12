@@ -1,68 +1,49 @@
+<script>
+</script>
+
 <div class="PageContentContainer">
-    <div class="AlertsCard">
-        <h3>Recent Alerts</h3>
-        <ul class="AlertsList">
-            <li>A cave has collapsed in Southland<br>
-                1 injury, 1 unknown<br>
-            <em>1/11/2024 10:20am</em></li>
-            <li>Theres been a mutiny in Nelson<br>
-                <em>18/10/2024 9:32am</em></li>
-        </ul>
-    </div>
-
-    <figure class="pinmap">
-        <h3>Active Disasters</h3>
-        <img src=".\Images\New_Zealand_Regions.png" alt="A map of New Zealand">
-    </figure>
-    
+    <h2>Welcome to Crisis Connect</h2>
+    <h5>Haere Mai! Welcome!</h5>
+    <p>
+        Welcome to Crisis Connect, your gateway to understanding and managing natural hazards in Aotearoa New Zealand.
+        Here, you can explore the risks posed by various natural disasters, see how past events have impacted properties,
+        and gain the knowledge you need to make informed decisions to protect your home, community, and future.
+    </p>
 </div>
-
 <style>
-
-    h3 {
-        margin-top: 0.5em;
-        font-size: 180%;
+    h2 {
+        color: #145da0;
+        font-size: 2.5em;
         text-align: center;
+        font-weight: 700;
+        margin-top: 3em;
+        margin-bottom: 1em;
     }
 
-    img {
-        max-height: 90%;
-        width: auto;
+    h5 {
+        color: #b1d4e0;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 2em;
+        font-weight: 400;
+    }
+
+    p {
+        color: #b1d4e0;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto 3em auto;
     }
 
     .PageContentContainer {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2em;
+        box-sizing: border-box;
         width: 100%;
     }
-
-    .AlertsCard{
-        display: flex;
-        flex-direction: column;
-        border: solid;
-        width: 25em;
-        min-height: 80vh;
-        justify-self: left;
-    }
-
-    .AlertsList li {
-        margin-top: 0.5em;
-        list-style: none;
-        padding-left: 0.5em;
-    }
-
-    .pinmap {
-        max-height: 100%;
-        width: auto;
-        border: solid;
-        text-align: center;
-        background-color: #B7DAF8;
-    }
-
-    .pinmap h3 {
-        background-color: #B7DAF8;
-    }
-
 </style>
