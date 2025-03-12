@@ -13,6 +13,40 @@
 </div>
 
 <div class="container">
+    <h2>The Police</h2><br>
+    <ul>
+        <li>Region: Nelson-Tasman</li>
+        <li>Name: Gerald Targaryen</li>
+        <li>Role: chief of police</li>
+        <li>Email: *********</li>
+        <li>Work phone: ********</li>
+        <li>Cell phone: ********</li>
+        <li>Address: *******</li>
+        <li>Radio channel: N/A</li>
+    </ul><br>
+    <ul>
+        <li>Region: Nelson-Tasman</li>
+        <li>Name: Gerald Targaryen</li>
+        <li>Role: chief of police</li>
+        <li>Email: *********</li>
+        <li>Work phone: ********</li>
+        <li>Cell phone: ********</li>
+        <li>Address: *******</li>
+        <li>Radio channel: N/A</li>
+    </ul><br>
+    <ul>
+        <li>Region: Nelson-Tasman</li>
+        <li>Name: Gerald Targaryen</li>
+        <li>Role: chief of police</li>
+        <li>Email: *********</li>
+        <li>Work phone: ********</li>
+        <li>Cell phone: ********</li>
+        <li>Address: *******</li>
+        <li>Radio channel: N/A</li>
+    </ul>
+</div>
+
+<div class="container">
     <h2>Fire and Emergency</h2><br>
     <ul>
         <li>Region: Otago</li>
