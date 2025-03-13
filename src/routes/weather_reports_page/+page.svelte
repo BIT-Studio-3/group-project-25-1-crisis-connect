@@ -45,5 +45,23 @@
 </ul>
 </section>
  
-
-  
+<style>
+  select {
+    background-color: #0c2d48; /* Dark Blue */
+    color: #fff;
+    border: 1px solid #2e8bc0; /* Blue */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  select:focus {
+    outline: none;
+    border-color: #b1d4e0; /* Baby Blue */
+  } 
+  label {
+    font-size: 18px;
+    color: #b1d4e0;
+  }
+ 
+</style>
