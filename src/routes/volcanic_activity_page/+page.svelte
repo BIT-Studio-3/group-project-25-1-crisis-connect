@@ -40,6 +40,7 @@
     displayVolcanoCards();
 </script>
 
+<section>
 <h2>Volcanic Activity</h2>
 <h3>Colour Code:</h3>
 <div class="Code">
@@ -64,7 +65,7 @@
         </div>
     {/each}
 </div>
-
+</section>
 <style>
     h2 {
         margin-top: 0.5em;
