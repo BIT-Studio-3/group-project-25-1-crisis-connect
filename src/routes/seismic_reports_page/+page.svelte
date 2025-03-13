@@ -4,6 +4,7 @@
     export let data;
 </script>
 
+<section>
 <!-- Page title -->
 <h1>Quakes</h1>
 <div class="container">
@@ -86,7 +87,7 @@
         {/each}
     </details>
 </div>
-
+</section>
 <style>
 
     div {
@@ -105,13 +106,12 @@
 
     details {
         padding: 0.5em;
-        background-color: #b7daf8;
         border-radius: 0.5em;
         padding-left: 10px;
     }
 
     summary {
-        background-color: #689fd4;
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
         list-style-position: outside;
         margin-left: 10px;
