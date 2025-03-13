@@ -12,13 +12,7 @@
             <li><a href="/fire_and_emergency_page" >Fire and Emergency Reports</a></li>
             <li><a href="/rss">RSS Feed</a></li>
             <li><a href="/alert_system" >Post an Alert!!!</a></li> 
-                 
-        </nav>
-</section>
-
-<section>
-    <!--This will be a drop down menu that will descend on click or mouse hover (Contact)-->
-        <nav><h1>Contact</h1><br>
+            <h1>Contact</h1><br>
             <li><a href="/contact_page">Contact services</a></li>         
             <li>Contact us "the developers"</li>
             <li>Group communication</li>        <!--Just an idea for a feature-->
@@ -28,14 +22,8 @@
 
 
 <style>
-    /*.box{
-        display: flex;
-        justify-content: flex-start;
-        gap: 20px;
-        align-items: center;
-    }*/
     a {
-        
+        color: #145da0;
         text-decoration: none;
     }
     li{
