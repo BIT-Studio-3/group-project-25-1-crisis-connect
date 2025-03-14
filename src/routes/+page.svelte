@@ -1,6 +1,24 @@
 <script>
+    
 </script>
-
+<section>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <iframe src="/weather_reports_page" ></iframe>
+          <div class="text">Page 1</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <iframe src="/seismic_reports_page"></iframe>
+          <div class="text">Page 2</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <iframe src="rss/"></iframe>
+          <div class="text">Page 3</div>
+        </div>
+    </div>
+      
 <div class="PageContentContainer">
     <h2>Welcome to Crisis Connect</h2>
     <h5>Haere Mai! Welcome!</h5>
@@ -19,9 +37,39 @@
     <li><strong>Prepare for the Unexpected:</strong> With real-time hazard alerts and preparedness resources, 
         you can stay informed about imminent risks. Whether it’s an approaching storm or an earthquake warning, 
         you’ll have the knowledge and support you need to act quickly.</li>
-
 </div>
+</section>
 <style>
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+
+.text {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@keyframes fade {
+  0% { opacity: 0.4; }
+  20% { opacity: 1; }
+  60% { opacity: 1; }
+  80% { opacity: 0.4; }
+  100% { opacity: 0.4; }
+}
+
     h2 {
         color: #145da0;
         font-size: 2.5em;
