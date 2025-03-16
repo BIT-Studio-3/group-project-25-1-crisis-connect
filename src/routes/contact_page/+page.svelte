@@ -1,25 +1,22 @@
 <script>
-    let inputText = "";
-    let inputName = "";
-    let name = "";
+    let name = '';
+    let names = [];
+    let role = '';
+    let roles = [];
     
-    function saveInput(event){
-        event.preventDefault();
-        inputName = name;
+    function addName(){
+        if (name.trim())
+        names = [...names, name];
+        name = '';
     }
+    function addRole(){
+        if (role.trim())
+        roles = [...roles, role];
+        role = '';
+    }
+
 </script>
 
-<br>
-<box>
-    <p>Enter details below</p>
-    <form on:submit={saveInput}>
-        <label for="name">Name
-            <input type="text" bind:value={name} id="name">
-        </label>
-
-    </form>
-</box>
-<h2>Name: {inputName}</h2>
 <div class="box">
     <h1>Emergency Services</h1><br>
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
@@ -31,38 +28,40 @@
     </div>
 </div>
 <section>
+    <br>
+
+    <p>Enter details below</p><br>
+    <form on:submit={addName, addRole}>
+        <label for="name">Name
+            <input type="text" bind:value={name} id="name">
+        </label><br>
+
+        <label for="role">Role
+            <input type="text" bind:value={role} id="role">
+        </label>
+        
+        <button type="submit">Save</button>
+
+    </form>
+
 <div class="container">
     <h2>The Police</h2><br>
     <ul>
+        
         <li>Region: Nelson-Tasman</li>
-        <li>Name: {inputName}</li>
-        <li>Role: chief of police</li>
+        {#each names as newName}
+        <li>Name:  {newName}</li>
+        {/each}
+        {#each roles as newRole}
+        <li>Role: {newRole}</li>
+        {/each}
         <li>Email: *********</li>
         <li>Work phone: ********</li>
         <li>Cell phone: ********</li>
         <li>Address: *******</li>
-        <li>Radio channel: N/A</li>
+        
+        
     </ul><br>
-    <ul>
-        <li>Region: Nelson-Tasman</li>
-        <li>Name: Gerald Targaryen</li>
-        <li>Role: chief of police</li>
-        <li>Email: *********</li>
-        <li>Work phone: ********</li>
-        <li>Cell phone: ********</li>
-        <li>Address: *******</li>
-        <li>Radio channel: N/A</li>
-    </ul><br>
-    <ul>
-        <li>Region: Nelson-Tasman</li>
-        <li>Name: Gerald Targaryen</li>
-        <li>Role: chief of police</li>
-        <li>Email: *********</li>
-        <li>Work phone: ********</li>
-        <li>Cell phone: ********</li>
-        <li>Address: *******</li>
-        <li>Radio channel: N/A</li>
-    </ul>
 </div>
 
 <div class="container">
@@ -161,6 +160,7 @@
         border-radius: 8px;
         padding: 20px;
         width: 300px;
+        overflow-y: auto;
         background-color: #f9f9f9;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 10px;
