@@ -32,6 +32,16 @@
 
     <p>Enter details below</p><br>
     <form on:submit={addName, addRole}>
+        
+        <label for="type">Region:</label>
+
+        <select for="type" id="type">   
+        
+        <option value="otago">Otago</option>
+        <option value="cantabury">Cantabury</option>
+        <option value="southland">Southland</option>
+        </select><br>
+        
         <label for="name">Name
             <input type="text" bind:value={name} id="name">
         </label><br>
