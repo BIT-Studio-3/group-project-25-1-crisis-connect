@@ -11,9 +11,10 @@
 
 <section>
   
-  <!-- Sidebar Container -->
-  <div class="relative">
-    <!-- Sidebar Toggle Button -->
+   <!-- Sidebar Container -->
+   <img src = "src/images/logo.png" alt = "Connect Criss logo"/>
+    <div class="relative">
+      <!-- Sidebar Toggle Button -->
     <button 
     class="btn p-2 m-1 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white rounded-full"
     on:click={toggleSidebar}
@@ -35,7 +36,7 @@
   <!-- Sidebar Content with Slide Transition -->
   {#if isSidebarOpen}
   <div transition:slide class="sidebar">
-    <span class="text-2xl cursor-pointer closebtn" on:click={toggleSidebar}>&times;</span>
+    <button class="text-2xl cursor-pointer closebtn" on:click={toggleSidebar}>&times;</button>
     <h2 class="text-xl font-semibold mb-4">Live Data</h2>
     <ul class="space-y-2">
       <li><a class="btn btn-outline btn-primary w-full" href="/weather_reports_page">Weather Reports</a></li>
@@ -57,10 +58,28 @@
   </div>
   {/if}
 </div>
+
 </section>
 
 
 <style>
+  section
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#b1d4e0;
+    padding: 2em;
+    flex-direction:row-reverse;
+    border: 2px solid rgb(91, 90, 160);
+  }
+  img { /* image float right side */
+    
+    width: 80px;
+    height: auto;
+    float: left;
+    text-align: center;
+  }
   /* Sidebar styles */
   .sidebar {
     position: fixed;
@@ -83,4 +102,4 @@
   .sidebar-button.open {
     transform: rotate(180deg);
   }
-</style>
+  </style>
