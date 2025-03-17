@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from "svelte";
     let region = '';
     let regions = [];
     let name = '';
@@ -8,18 +9,19 @@
     
     function addDetails(event){
         event.preventDefault();
-        if (region.trim())
-        regions = [...regions, region];
+        
+            if (region.trim()){
+            regions = [...regions, region];
+        }
+            if (name.trim()){
+            names = [...names, name];
+            name = '';
+        }
+            if (role.trim()){
+            roles = [...roles, role];
+            role = '';
+        }
     }
-        if (name.trim()){
-        names = [...names, name];
-        name = '';
-    }
-        if (role.trim()){
-        roles = [...roles, role];
-        role = '';
-    }
-
 </script>
 
 <div class="box">
@@ -62,7 +64,7 @@
     <h2>The Police</h2><br>
     <ul>
         {#each regions as newRegion}
-        <li>Region: {region}</li>
+        <li>Region: {newRegion}</li>
         {/each}
         {#each names as newName}
         <li>Name:  {newName}</li>
@@ -70,10 +72,6 @@
         {#each roles as newRole}
         <li>Role: {newRole}</li>
         {/each}
-        <li>Email: *********</li>
-        <li>Work phone: ********</li>
-        <li>Cell phone: ********</li>
-        <li>Address: *******</li>
         
         
     </ul><br>
@@ -171,12 +169,12 @@
 </section>
 <style>
     .container{
-        border: 2px solid #2fd6ce;
+        border: 2px solid #f80606;
         border-radius: 8px;
         padding: 20px;
         width: 300px;
         overflow-y: auto;
-        background-color: #f9f9f9;
+        background-color: #ffffff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 10px;
         float: left;
@@ -186,7 +184,7 @@
         margin: 15px;
     }
     .box2{
-        border: 2px solid #6c6c6c;
+        border: 2px solid #0084ff;
         border-radius: 8px;
         padding: 5px;
         width: 80px;
@@ -195,7 +193,7 @@
         margin: 5px;
     }
     .box3{
-        border: 2px solid #6c6c6c;
+        border: 2px solid #0084ff;
         border-radius: 8px;
         padding: 5px;
         width: 80px;
