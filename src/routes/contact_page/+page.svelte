@@ -1,16 +1,21 @@
 <script>
+    let region = '';
+    let regions = [];
     let name = '';
     let names = [];
     let role = '';
     let roles = [];
     
-    function addName(){
-        if (name.trim())
+    function addDetails(event){
+        event.preventDefault();
+        if (region.trim())
+        regions = [...regions, region];
+    }
+        if (name.trim()){
         names = [...names, name];
         name = '';
     }
-    function addRole(){
-        if (role.trim())
+        if (role.trim()){
         roles = [...roles, role];
         role = '';
     }
@@ -31,15 +36,14 @@
     <br>
 
     <p>Enter details below</p><br>
-    <form on:submit={addName, addRole}>
+    <form on:submit={addDetails}>
         
         <label for="type">Region:</label>
 
-        <select for="type" id="type">   
-        
-        <option value="otago">Otago</option>
-        <option value="cantabury">Cantabury</option>
-        <option value="southland">Southland</option>
+        <select bind:value={region} id="region">   
+            <option value="otago">Otago</option>
+            <option value="cantebury">Cantebury</option>
+            <option value="southland">Southland</option>
         </select><br>
         
         <label for="name">Name
@@ -57,8 +61,9 @@
 <div class="container">
     <h2>The Police</h2><br>
     <ul>
-        
-        <li>Region: Nelson-Tasman</li>
+        {#each regions as newRegion}
+        <li>Region: {region}</li>
+        {/each}
         {#each names as newName}
         <li>Name:  {newName}</li>
         {/each}
