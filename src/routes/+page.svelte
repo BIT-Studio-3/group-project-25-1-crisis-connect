@@ -4,17 +4,17 @@
 <section>
     <div class="slideshow-container">
         <div class="mySlides fade">
-          <iframe src="/weather_reports_page" ></iframe>
+          <iframe src="/weather_reports_page" title="weather_report"></iframe>
           <div class="text">Page 1</div>
         </div>
       
         <div class="mySlides fade">
-          <iframe src="/seismic_reports_page"></iframe>
+          <iframe src="/seismic_reports_page" title="earthquake"></iframe>
           <div class="text">Page 2</div>
         </div>
       
         <div class="mySlides fade">
-          <iframe src="rss/"></iframe>
+          <iframe src="rss/" title="rss"></iframe>
           <div class="text">Page 3</div>
         </div>
     </div>
