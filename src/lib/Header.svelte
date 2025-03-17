@@ -69,15 +69,14 @@
     justify-content: space-between;
     align-items: center;
     background-color:#b1d4e0;
-    padding: 2em;
+    padding: 0.5em;
     flex-direction:row-reverse;
-    border: 2px solid rgb(91, 90, 160);
+    border: 2px solid #2e8bc0;
   }
   img { /* image float right side */
-    
     width: 80px;
     height: auto;
-    float: left;
+  
     text-align: center;
   }
   /* Sidebar styles */
@@ -87,7 +86,7 @@
     left: 0;
     height: 100%;
     width: 16rem; /* w-64 */
-    background-color: #1e293b; /* Darker base color */
+    background-color: #145da0; /* Darker base color */
     color: white;
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
