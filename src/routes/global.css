@@ -8,14 +8,14 @@ body{
     padding: 0;
     color: #fff;
   }
-  h2 {
+h2 {
     color: #145da0; 
     font-size: 2.5rem;
     text-align: center;
     padding-top: 20px;
   }
 
-  ul {
+ul {
     list-style-type: none;
     padding: 0;
     margin: 20px auto;
@@ -26,29 +26,31 @@ body{
     padding: 20px;
   }
  
-  li {
+li {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
  
-  li strong {
+li strong {
     color: #b1d4e0;
   }
  
-  section {
+section {
     text-align: center;
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     max-width: 800px;
+    width: 100%;
     margin: 50px auto;
     transition: all 0.3 ease;
+
   }
-  a {
+a {
     color: #b1d4e0;
   }
 
-  a:hover {
+a:hover {
     color: #145da0;
     text-decoration: underline;
   }
