@@ -1,5 +1,5 @@
 <script>
-//I have downloaded the dependencies of leaflet using
+  //I have downloaded the dependencies of leaflet using
   //npm install leaflet in the git bash
   //Importing leaflet 'L' from the downloaded dependency with its css
   import L from "leaflet";
@@ -22,9 +22,8 @@
     L.marker([-45.865963211874174, 170.5189969281258]).addTo(map)
       .bindPopup("You are here :)")
       .openPopup();
-  });    
+  });
 </script>
-<<<<<<< HEAD
 
 <!-- svelte-ignore a11y-missing-attribute -->
 <html>
@@ -36,7 +35,6 @@
 
   </body>
 </html>
-=======
  
 <style>
   #map {
@@ -48,4 +46,3 @@
 <section>
 <div id="map" bind:this={mapContainer}></div>
 </section>
->>>>>>> 982d5638b4c5c6a7a54e3eaac70d02c9fe40543c
