@@ -53,7 +53,7 @@
       <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Contact Services</a></li>
       <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact us "the developers"</a></li>
       <li><a class="btn btn-outline btn-secondary w-full" href="/group_chat">Group Communication</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full disabled" href="#">Location-based Live Chat (Coming Soon)</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full disabled" href = "/live_chat">Location-based Live Chat (Coming Soon)</a></li>
     </ul>
   </div>
   {/if}
@@ -71,8 +71,17 @@
     background-color:#b1d4e0;
     padding: 0.5em;
     flex-direction:row-reverse;
-    border: 2px solid #2e8bc0;
+    border: 2px solid #2e8bc0  ;
+  }@media only screen and (max-width: 400px) {
+    section {
+      flex-direction:row-reverse;
+      justify-content: space-between;
+      align-items : center;
+      padding: 0.2 em;
+    }
   }
+
+
   img { /* image float right side */
     width: 80px;
     height: auto;
@@ -86,7 +95,7 @@
     left: 0;
     height: 100%;
     width: 16rem; /* w-64 */
-    background-color: #145da0; /* Darker base color */
+    background-color: #b1d4e0; /* Darker base color */
     color: white;
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
