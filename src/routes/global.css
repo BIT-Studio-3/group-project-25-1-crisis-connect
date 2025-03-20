@@ -1,5 +1,5 @@
 body{
-    background-image: url('../Images/bg.jpg'); 
+    background-image: url('/Images/bg.jpg'); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -54,3 +54,20 @@ a:hover {
     color: #145da0;
     text-decoration: underline;
   }
+  @media (max-width: 768px) {
+    section {
+      padding: 20px;
+      width: 90%;
+      margin: 30px auto;
+    }
+    
+    ul {
+      width: 90%;
+      padding: 15px;
+    }
+    
+    li {
+      font-size: 1rem;
+    }
+  }
+  

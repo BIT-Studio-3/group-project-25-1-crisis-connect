@@ -105,4 +105,72 @@
         box-sizing: border-box;
         width: 100%;
     }
+    @media (max-width: 1024px) {
+    h2 {
+        font-size: 2em;
+        margin-top: 2em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .PageContentContainer {
+        padding: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 16px;
+        bottom: 4px;
+        left: 8px;
+    }
+
+    iframe {
+        height: 40vh;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
 </style>

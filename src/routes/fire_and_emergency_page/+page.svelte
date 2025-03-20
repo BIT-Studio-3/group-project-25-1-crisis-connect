@@ -1,96 +1,60 @@
 <script>
-  import Header from "$lib/Header.svelte";
-  import Footer from "$lib/Footer.svelte";
 </script>
 
 <section>
-  <!-- Card 1 -->
+  {#each [
+    { severity: "Severe", level: "severe", incident: "F4081881", date: "06/11/2024 11:07:51", location: "Doyleston, Selwyn District", duration: "00:00:00", station: "Leeston", type: "Vegetation Fire" },
+    { severity: "Moderate", level: "moderate", incident: "F4081881", date: "06/11/2024 11:07:51", location: "Doyleston, Selwyn District", duration: "00:00:00", station: "Leeston", type: "Vegetation Fire" },
+    { severity: "Severe", level: "severe", incident: "F4081881", date: "06/11/2024 11:07:51", location: "Doyleston, Selwyn District", duration: "00:00:00", station: "Leeston", type: "Vegetation Fire" },
+    { severity: "Extreme", level: "extreme", incident: "F4081881", date: "06/11/2024 11:07:51", location: "Doyleston, Selwyn District", duration: "00:00:00", station: "Leeston", type: "Vegetation Fire" }
+  ] as card}
   <div class="card">
     <h1>
-      Emergency: <span class="severity severe">Severe</span>
+      Emergency: <span class="severity {card.level}">{card.severity}</span>
     </h1>
-    <p class="headers">Incident Number:</p><p>F4081881</p>
-    <p class="headers">Date and Time:</p><p>06/11/2024 11:07:51</p>
-    <p class="headers">Location:</p><p>Doyleston, Selwyn District</p>
-    <p class="headers">Duration:</p><p>00:00:00</p>
-    <p class="headers">Attending Stations/Brigades:</p><p>Leeston</p>
-    <p class="headers">Call Type:</p><p>Vegetation Fire</p>
+    <p class="headers">Incident Number:</p><p>{card.incident}</p>
+    <p class="headers">Date and Time:</p><p>{card.date}</p>
+    <p class="headers">Location:</p><p>{card.location}</p>
+    <p class="headers">Duration:</p><p>{card.duration}</p>
+    <p class="headers">Attending Stations/Brigades:</p><p>{card.station}</p>
+    <p class="headers">Call Type:</p><p>{card.type}</p>
   </div>
-
-  <!-- Card 2 -->
-  <div class="card">
-    <h1>
-      Emergency: <span class="severity moderate">Moderate</span>
-    </h1>
-    <p class="headers">Incident Number:</p><p>F4081881</p>
-    <p class="headers">Date and Time:</p><p>06/11/2024 11:07:51</p>
-    <p class="headers">Location:</p><p>Doyleston, Selwyn District</p>
-    <p class="headers">Duration:</p><p>00:00:00</p>
-    <p class="headers">Attending Stations/Brigades:</p><p>Leeston</p>
-    <p class="headers">Call Type:</p><p>Vegetation Fire</p>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card">
-    <h1>
-      Emergency: <span class="severity severe">Severe</span>
-    </h1>
-    <p class="headers">Incident Number:</p><p>F4081881</p>
-    <p class="headers">Date and Time:</p><p>06/11/2024 11:07:51</p>
-    <p class="headers">Location:</p><p>Doyleston, Selwyn District</p>
-    <p class="headers">Duration:</p><p>00:00:00</p>
-    <p class="headers">Attending Stations/Brigades:</p><p>Leeston</p>
-    <p class="headers">Call Type:</p><p>Vegetation Fire</p>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="card">
-    <h1>
-      Emergency: <span class="severity extreme">Extreme</span>
-    </h1>
-    <p class="headers">Incident Number:</p><p>F4081881</p>
-    <p class="headers">Date and Time:</p><p>06/11/2024 11:07:51</p>
-    <p class="headers">Location:</p><p>Doyleston, Selwyn District</p>
-    <p class="headers">Duration:</p><p>00:00:00</p>
-    <p class="headers">Attending Stations/Brigades:</p><p>Leeston</p>
-    <p class="headers">Call Type:</p><p>Vegetation Fire</p>
-  </div>
+  {/each}
 </section>
 
 <style>
   section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 20px;
+    justify-items: center;
   }
 
   .card {
     padding: 20px;
-    margin: 10px;
     border: 2px solid black;
-    border-radius: 5px;
-    width: 280px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
   }
 
   h1 {
-    font-size: 1.8em;
-    margin: 10px 0;
+    font-size: 1.6em;
+    margin-bottom: 10px;
   }
 
   .severity {
-    padding: 4px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -111,11 +75,19 @@
   }
 
   .headers {
-    font-weight: 900;
-    margin: 5px 0;
+    font-weight: bold;
+    margin-top: 8px;
   }
 
   p {
     margin: 3px 0;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>
