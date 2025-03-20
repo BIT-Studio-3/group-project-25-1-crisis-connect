@@ -12,6 +12,7 @@
             <li><a href="/fire_and_emergency_page" >Fire and Emergency Reports</a></li>
             <li><a href="/rss">RSS Feed</a></li>
             <li><a href="/alert_system" >Post an Alert!!!</a></li> 
+            <li><a href="/login_page"> Login</a></li>
                  
         </nav>
 </section>
