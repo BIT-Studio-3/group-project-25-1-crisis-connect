@@ -25,6 +25,7 @@
         justify-content: center;
         align-items: center;
         background-color: #145da0;
+        height:  50em;
     }
 
     form {
