@@ -59,38 +59,37 @@
 
 <style>
   section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 20px;
+    justify-items: center;
   }
 
   .card {
     padding: 20px;
-    margin: 10px;
     border: 2px solid black;
-    border-radius: 5px;
-    width: 280px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
   .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
   }
 
   h1 {
-    font-size: 1.8em;
-    margin: 10px 0;
+    font-size: 1.6em;
+    margin-bottom: 10px;
   }
 
   .severity {
-    padding: 4px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -111,11 +110,19 @@
   }
 
   .headers {
-    font-weight: 900;
-    margin: 5px 0;
+    font-weight: bold;
+    margin-top: 8px;
   }
 
   p {
     margin: 3px 0;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>
