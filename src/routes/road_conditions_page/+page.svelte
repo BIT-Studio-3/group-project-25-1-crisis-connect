@@ -25,20 +25,13 @@
   });
 </script>
  
+<style>
+  #map {
+    text-align: center;
+    width: 100%;
+    height: 800px;
+  }
+</style>
 <section>
 <div id="map" bind:this={mapContainer}></div>
 </section>
-
-<style>
-#map {
-  width: 100%;
-  height: 600px;
-}
-
-@media (max-width: 768px) {
-  #map {
-    height: 400px;
-  }
-}
-
-</style>

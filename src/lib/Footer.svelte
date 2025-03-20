@@ -13,75 +13,64 @@
         </ul>
     </nav>
 </footer>
- 
+
 <style>
+
+    p{
+        padding:10px;
+        text-align: center;
+        background-color: inherit;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: inherit;
+    }
+
     footer {
         display: flex;
-        flex-direction: column;
+        width: 90%;
+        position: relative;
+        top: 0;
+        flex-wrap: nowrap;
+        justify-content: space-around;
         align-items: center;
-        justify-content: center;
-        background: transparent;
-        color: #fff; 
-        padding: 20px;
-        font-size: 14px;
-        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
-        margin-top: 40px;
+        box-shadow: 0 4px 5px #333;
+        background: #689FD4;
+        padding: 1em;
+        margin: 0.5em;
+        justify-self: center;
     }
- 
-    footer p {
-        text-align: center;
-        margin: 5px 0;
-    }
- 
-    footer p:last-child {
-        font-size: 12px;
-    }
- 
-    footer a {
-        color: #ffffff;
-        text-decoration: none;
-    }
- 
-    ul{
-        background-color: transparent;
-    }
+
     nav {
         display: flex;
         flex-direction: row;
-        margin-top: 10px;
+        background-color: inherit;
     }
- 
+
     nav ul {
         display: flex;
         flex-direction: row;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+        flex-wrap: nowrap;
+        flex-flow: space-around;
+        background-color: inherit;
     }
- 
+
     nav ul li {
-        margin: 0 10px;
+        list-style: none;
+        padding: 0.5em;
+        background-color: inherit;
     }
- 
-    nav ul li a {
-        font-size: 16px;
-        padding: 15px;
-    }
- 
+
     @media (max-width: 600px) {
+
         footer {
-            font-size: 12px;
-            padding: 15px;
+            font-size: 70%;
         }
- 
+     
         nav ul {
             flex-direction: column;
-            align-items: center;
-        }
- 
-        nav ul li {
-            margin: 5px 0;
         }
     }
+
 </style>
- 
