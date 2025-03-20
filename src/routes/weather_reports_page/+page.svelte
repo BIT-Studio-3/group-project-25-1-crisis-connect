@@ -1,4 +1,3 @@
- 
 <script>
     import { onMount } from 'svelte';
    
@@ -136,4 +135,3 @@ function closeModal() {
     }
  
 </style>
- 

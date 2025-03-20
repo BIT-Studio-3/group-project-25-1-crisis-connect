@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
 </script>
 
-<section>
 <div>
   <iframe
     title="rss"
@@ -10,8 +9,8 @@
     src="https://rss.app/embed/v1/wall/LgTbpx1cNjP0QQF4"
     frameborder="0"
   ></iframe>
+
 </div>
-</section>
 
 <style>
   h1 {
@@ -33,6 +32,6 @@
   }
   .rss {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
   }
 </style>
