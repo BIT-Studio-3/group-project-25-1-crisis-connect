@@ -14,7 +14,7 @@
     <div class="container">
       <label for="title">Title:</label>
 
-      <input typ="text" id="title" name="alert-title" />
+      <input type="text" id="title" name="alert-title" />
 
       <label for="type">Emergency type:</label>
 
@@ -97,6 +97,20 @@
     }
     label {
       align-self: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    form {
+      padding: 1em;
+    }
+
+    input, select, textarea {
+      font-size: 0.9em;
+    }
+
+    button {
+      width: 100%;
     }
   }
 </style>
