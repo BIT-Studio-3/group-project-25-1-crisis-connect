@@ -12,7 +12,7 @@
 <section>
   
    <!-- Sidebar Container -->
-   <img src = "src/images/logo.png" alt = "Connect Criss logo"/>
+   <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
     <div class="relative">
       <!-- Sidebar Toggle Button -->
     <button 
