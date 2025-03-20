@@ -24,6 +24,8 @@
   onMount(() => {
     fetchWeather(selectedCity);
   });
+
+ 
 </script>
  
  
@@ -43,7 +45,20 @@
 <li><strong>Windspeed: </strong>{weather.wind?.speed ? `${weather.wind.speed} Knots` : "No wind data"}</li>
 <li><strong>Windspeed Gusts: </strong>{weather.wind?.gust ? `${weather.wind.gust} Knots` : "No gust data"}</li>    
 </ul>
-</section>
- 
 
-  
+<!--popup alert system-->
+{#if showModal}
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                ⚠ Flood Warning!
+            </div>
+            <div class="modal-body">
+                <span class="warning-icon">⚠</span>
+                <p>Heavy rainfall detected. Possible flooding in your area. Stay safe and take precautions.</p>
+            </div>
+            <button class="close-btn" on:click={closeModal}>Got It</button>
+        </div>
+    </div>
+{/if}
+</section>
