@@ -134,4 +134,50 @@
         color: #999888;
         border: solid black 2px;    
     }
+    @media (max-width: 1024px) {
+    .cardcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardcontainer {
+        grid-template-columns: repeat(1, 1fr); 
+        margin: 0.5em;
+    }
+
+    .volcanocard {
+        padding: 1em;
+        font-size: 1em;
+    }
+
+    .Code {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1em 0;
+    }
+
+    .Code p, .Code div {
+        font-size: 1em;
+        margin: 0.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .volcanocard {
+        text-align: center;
+    }
+}
+
 </style>
