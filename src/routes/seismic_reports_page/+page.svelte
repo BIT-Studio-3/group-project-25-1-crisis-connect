@@ -4,14 +4,15 @@
     export let data;
 </script>
 
+<section>
 <!-- Page title -->
 <h1>Quakes</h1>
 <div class="container">
     <details close>
         <summary><h2>MMI 5 Quakes</h2></summary>
-        {#each data.quakes.features as thing}
+        {#each data.quakes.features.slice(0,5) as thing}
             <div>
-                <h2>{thing.properties.locality}</h2>
+                <h3>{thing.properties.locality}</h3>
                 <h3>Coordinates (y, x):</h3>
                 <p>{thing.geometry.coordinates}</p>
                 <h3>Depth:</h3>
@@ -29,9 +30,9 @@
 <div class="container">
     <details close>
         <summary><h2>MMI 6 Quakes</h2></summary>
-        {#each data.quakes2.features as thing}
+        {#each data.quakes2.features.slice(0,5) as thing}
             <div>
-                <h2>{thing.properties.locality}</h2>
+                <h3>{thing.properties.locality}</h3>
                 <h3>Coordinates (y, x):</h3>
                 <p>{thing.geometry.coordinates}</p>
                 <h3>Depth:</h3>
@@ -49,9 +50,9 @@
 <div class="container">
     <details open>
         <summary><h2>MMI 7 Quakes</h2></summary>
-        {#each data.quakes3.features as thing}
+        {#each data.quakes3.features.slice(0,5) as thing}
             <div>
-                <h2>{thing.properties.locality}</h2>
+                <h3>{thing.properties.locality}</h3>
                 <h3>Coordinates (y, x):</h3>
                 <p>{thing.geometry.coordinates}</p>
                 <h3>Depth:</h3>
@@ -69,9 +70,9 @@
 <div class="container">
     <details open>
         <summary><h2>MMI 8 Quakes</h2></summary>
-        {#each data.quakes4.features as thing}
+        {#each data.quakes4.features.slice(0,5) as thing}
             <div>
-                <h2>{thing.properties.locality}</h2>
+                <h>{thing.properties.locality}</h>
                 <h3>Coordinates (y, x):</h3>
                 <p>{thing.geometry.coordinates}</p>
                 <h3>Depth:</h3>
@@ -86,12 +87,12 @@
         {/each}
     </details>
 </div>
-
+</section>
 <style>
-
     div {
         border: 2px solid black;
         margin: 0.6em;
+        display: inline-block;
     }
 
     h3 {
@@ -105,13 +106,12 @@
 
     details {
         padding: 0.5em;
-        background-color: #b7daf8;
         border-radius: 0.5em;
         padding-left: 10px;
     }
 
     summary {
-        background-color: #689fd4;
+        background-color: rgba(0, 0, 0, 0.5);
         color: white;
         list-style-position: outside;
         margin-left: 10px;
