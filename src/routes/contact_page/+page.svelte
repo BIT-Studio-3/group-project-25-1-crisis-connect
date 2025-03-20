@@ -1,13 +1,14 @@
 <script>
 </script>
 
+<section>
 <div class="box">
     <h1>Emergency Services</h1><br>
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
     <div class="box2">
         <h4>Click here to register</h4>
     </div>
-    <div class="box3">
+    <div class="box2">
         <h4>Download an offline safe copy</h4> 
     </div>
 </div>
@@ -101,7 +102,7 @@
         <li>Address: "Hidden"</li>
     </ul>
 </div>
-
+</section>
 <style>
     .container{
         border: 2px solid #2fd6ce;
@@ -112,6 +113,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 10px;
         float: left;
+        
     }
     .box{
         padding: 15px;
@@ -126,13 +128,9 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
     }
-    .box3{
-        border: 2px solid #6c6c6c;
-        border-radius: 8px;
-        padding: 5px;
-        width: 80px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 5px;
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 </style>
