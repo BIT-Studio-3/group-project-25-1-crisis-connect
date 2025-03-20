@@ -24,6 +24,7 @@
             <li>Group communication</li>        <!--Just an idea for a feature-->
             <li>Location based live chat</li>  <!--Also a possible feature idea-->
         </nav>
+        
 </section>
 
 
