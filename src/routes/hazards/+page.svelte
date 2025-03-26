@@ -1,7 +1,7 @@
 <script>
     let address = "";
     let area = "";
-    let hazard = "";
+    let type = "";
 </script>
 
 <section>
@@ -21,8 +21,8 @@
             <input type="text" id="area" bind:value={area}>
         </div><br>
         <div>
-            <label for="hazard">Hazard</label>
-            <input type="text" id="hazard" bind:value={hazard}>
+            <label for="type">Hazard</label>
+            <input type="text" id="type" bind:value={type}>
         </div><br>
         <button>Submit</button>
     </form>
@@ -30,7 +30,7 @@
 
 <p>Address: {address}</p>
 <p>Area: {area}</p>
-<p>Hazard: {hazard}</p>
+<p>Hazard: {type}</p>
 
 </section>
 
