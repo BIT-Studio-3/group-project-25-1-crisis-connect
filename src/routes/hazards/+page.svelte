@@ -1,7 +1,13 @@
 <script>
-    let address = "";
-    let area = "";
-    let type = "";
+    let streetNumber = "";
+    let streetName = "";
+    let region = "";
+    let hazardType = "";
+
+    function onSubmit(){
+        console.log("Submitted!");
+    }
+
 </script>
 
 <section>
@@ -11,26 +17,32 @@
 <p>Let us know below if you come accross any hazards during distasters to help avoid accidents</p>
 
 <div class="container">
-    <form>
-        <div>
-            <label for="address">Address</label>
-            <input type="text" id="address" bind:value={address}>
+    <form on:submit|preventDefault={onsubmit}>
+        <div>    
+            <label for="address">Street</label>
+            <input type="text" id="streetName" bind:value={streetName}><br>
+            <label for="address">Number</label>      
+            <input type="number" id="streetNumber" bind:value={streetNumber}><br>
         </div><br>
         <div>
-            <label for="address">Area</label>
-            <input type="text" id="area" bind:value={area}>
+            <label for="region">Region</label>
+            <select bind:value={region}>
+                <option value="Otago">Otago</option>
+                <option value="Cantebury">Cantebury</option>
+                <option value="Southland">Southland</option>
         </div><br>
         <div>
-            <label for="type">Hazard</label>
-            <input type="text" id="type" bind:value={type}>
+            <label for="hazardType">Hazard type</label>
+            <input type="text" id="hazardType" bind:value={hazardType}>
         </div><br>
-        <button>Submit</button>
+        <button on:submit={onSubmit}>Submit</button>
     </form>
 </div>
 
-<p>Address: {address}</p>
-<p>Area: {area}</p>
-<p>Hazard: {type}</p>
+<p>Street: {streetName}</p>
+<p>Number: {streetNumber}</p>
+<p>Region: {region}</p>
+<p>Hazard: {hazardType}</p>
 
 </section>
 
@@ -45,6 +57,11 @@
         font-size: small;
         color: rgb(0, 0, 0);
     }
+    select {
+        color:rgb(0, 0, 0);
+    }
 </style>
 
+<!--References below-->
 
+<!--https://www.thisdot.co/blog/handling-forms-in-svelte-->
