@@ -3,9 +3,10 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon app.js",
+		"prisma:migrate": "npx prisma migrate dev",
+		"prisma:reset": "npx prisma migrate reset --force"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -20,6 +21,8 @@
 		"@prisma/client": "^6.5.0",
 		"leaflet": "^1.9.4",
 		"moment": "^2.30.1",
-		"rss-parser": "^3.13.0"
+		"rss-parser": "^3.13.0",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui-express": "^5.0.1"
 	}
 }
