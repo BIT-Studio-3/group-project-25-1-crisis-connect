@@ -1,2 +1,2 @@
 Docker 
-docker run --name criss-connect -e POSTGRES_PASSWORD=HelloWorld123 -p 5430:5430 -d postgres
+docker run --name criss-connect -e POSTGRES_PASSWORD=HelloWorld123 -p 5432:5432-d postgres
