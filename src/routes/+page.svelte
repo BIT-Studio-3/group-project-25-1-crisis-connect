@@ -44,11 +44,11 @@
     label {
         display: inline-block;
         min-width: 90px;
-        text-align: right;
+        text-align: left;
         background-color: #b1d4e0;
     }
     input{
-        background-color: #b1d4e0;
+        background-color: #ffffff;
     }
     button{
         background-color: #b1d4e0;
