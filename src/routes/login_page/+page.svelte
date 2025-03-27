@@ -24,31 +24,30 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #145da0;
         height:  50em;
     }
 
     form {
         display: inline-block;
-        padding: 1em;
-        border: 1px solid #0c2d48;
-        border-radius: 1em;
+        padding: 2em;
+        border: 2px solid #0c2d48;
+        border-radius: 2em;
         background:  #2e8bc0;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     p + p {
-        margin-top: 1em;
+        margin-top: 2em;
     }
 
     label {
         display: inline-block;
-        min-width: 90px;
+        min-width: 180px;
         text-align: left;
         background-color: #b1d4e0;
     }
     input{
-        background-color: #ffffff;
+        background-color: #b1d4e0;
     }
     button{
         background-color: #b1d4e0;
@@ -58,10 +57,10 @@
     }
 
     .button {
-        padding-left: 90px;
+        text-align: center;
     }
 
     button {
-        margin-left: 0.5em;
+        margin-left: 1em;
     }
 </style>
