@@ -6,9 +6,11 @@
     let towncity = "";
     let hazardType = "";
     let description = "";
+    let submitted = false;
 
     function onSubmit(){
         console.log("Submitted!");
+        submitted = true;
     }
 
 </script>
@@ -19,10 +21,8 @@
 
 <p><em>Let us know below if you come across any hazards during disasters to help avoid accidents</em></p><br>
 
-<div class="bo">
-
 <div class="container">
-    <form on:submit|preventDefault={onsubmit}>
+    <form on:submit|preventDefault={onSubmit}>
         <div class="form-group">
             <label for="date">Date: </label>
             <input type="date" id="date" bind:value={date}>
@@ -75,14 +75,35 @@
         
     </form>
 </div>
-</div>
-<p>Date: {date}</p>
-<p>Street: {streetName}</p>
-<p>Number: {streetNumber}</p>
-<p>Region: {region}</p>
-<p>Hazard: {hazardType}</p>
-<p>Description: {description}</p>
 
+{#if submitted}
+    <table class="table" style width="100%">
+        <tr>
+            <td>Date: </td>
+            <td>{date}</td>
+        </tr>
+        <tr>
+            <td>Street: </td>
+            <td>{streetName}</td>
+        </tr>
+        <tr>
+            <td>Number: </td>
+            <td>{streetNumber}</td>
+        </tr>    
+        <tr>
+            <td>Region: </td>
+            <td>{region}</td>
+        </tr>
+        <tr>
+            <td>Hazard: </td>
+            <td>{hazardType}</td>
+        </tr>
+        <tr>
+            <td>Description: </td>
+            <td>{description}</td>
+        </tr>
+    </table>
+{/if}
 </section>
 
 <style>
@@ -122,6 +143,10 @@
         display: grid;
         grid-template-columns: 5fr 5fr;
         align-items: center;
+    }
+    .table {
+        table-layout: auto;
+        width: 150px;
     }
 
 </style>
