@@ -30,9 +30,11 @@
     <div class="box2">
         <h4>Click here to register</h4>
     </div>
+    <!--
     <div class="box3">
-        <a href="/C:/Users/ayys/Desktop/project-24-2-JayDos89.pdf" download="my_document.pdf">Download PDF</a> 
+        <a href="/C:/Users/ayys/Desktop/project-24-2-JayDos89.pdf" download="my_document.pdf">Download PDF</a>
     </div>
+    -->
 </div>
 <section>
     <br>
@@ -44,7 +46,7 @@
 
         <select bind:value={region} id="region">   
             <option value="otago">Otago</option>
-            <option value="cantebury">Cantebury</option>
+            <option value="canterbury">Canterbury</option>
             <option value="southland">Southland</option>
         </select><br>
         
@@ -201,7 +203,7 @@
         background-color: #f9f9f9;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
-    }
+    }/*
     .box3{
         border: 2px solid #0084ff;
         border-radius: 8px;
@@ -210,5 +212,5 @@
         background-color: #f9f9f9;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
-    }
+    }*/
 </style>
