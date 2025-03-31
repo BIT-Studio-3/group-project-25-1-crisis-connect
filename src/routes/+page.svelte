@@ -47,6 +47,7 @@
         min-width: 90px;
         text-align: left;
         background-color: #b1d4e0;
+        color: #333;
     }
     input{
         background-color: #ffffff;
@@ -54,6 +55,7 @@
     }
     button{
         background-color: #b1d4e0;
+        color: #333;
     }
     p{
         background-color: #b1d4e0;
