@@ -22,10 +22,11 @@
 <style>
     .container {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        background-color: #145da0;
-        height:  50em;
+        gap: 1em;
+        margin:auto;
+        margin-bottom: 26em;
     }
 
     form {
@@ -46,12 +47,15 @@
         min-width: 90px;
         text-align: left;
         background-color: #b1d4e0;
+        color: #333;
     }
     input{
         background-color: #ffffff;
+        color: #333;
     }
     button{
         background-color: #b1d4e0;
+        color: #333;
     }
     p{
         background-color: #b1d4e0;
@@ -64,4 +68,6 @@
     button {
         margin-left: 0.5em;
     }
+
+
 </style>

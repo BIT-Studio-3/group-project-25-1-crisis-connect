@@ -71,7 +71,7 @@
 }
 
     h2 {
-        color: #145da0;
+        color: #333;
         font-size: 2.5em;
         text-align: center;
         font-weight: 700;

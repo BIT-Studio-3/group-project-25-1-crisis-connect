@@ -45,7 +45,6 @@
       <li><a class="btn btn-outline btn-primary w-full" href="/fire_and_emergency_page">Fire and Emergency Reports</a></li>
       <li><a class="btn btn-outline btn-primary w-full" href="/rss">RSS Feed</a></li>
       <li><a class="btn btn-outline btn-error w-full" href="/alert_system">⚠️ Post an Alert</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/login_page"> Login</a></li>
     </ul>
     
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
