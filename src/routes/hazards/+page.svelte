@@ -17,7 +17,7 @@
 
 <section>
 
-<h2>Post local hazards here</h2>
+<h2>Post local hazards here</h2><img src="/images/hazard_sign2.png" alt="Hazard sign">
 
 <p><em>Let us know below if you come across any hazards during disasters to help avoid accidents</em></p><br>
 
@@ -69,8 +69,8 @@
             <input type="textarea" id="description" rows="5" column="3" bind:value={description}>
         </div>
 
-        <div class="form-group">
-            <button on:submit={onSubmit}>Submit</button>
+        <div>
+            <button class="button1" on:submit={onSubmit}>Submit</button>
         </div>
         
     </form>
@@ -116,12 +116,12 @@
     }
     input {
         font-size: small;
-        background-color: antiquewhite;
+        background-color: aliceblue;
         color: rgb(0, 0, 0);
         border: 3px solid;
     }
     select {
-        background-color: antiquewhite;
+        background-color: aliceblue;
         color:rgb(0, 0, 0);
         color: rgb(0, 0, 0);
         border: 3px solid;
@@ -148,7 +148,22 @@
         table-layout: auto;
         width: 150px;
     }
-
+    h2 {
+        color:blue;
+        font-family:'Trebuchet MS';
+        font-size: 50px;
+        font-weight: 650;
+        text-shadow: 2px 2px 2px #000;       
+    }
+    .button1 {
+        background-color: blue;
+        size: 5px;
+        width:5rem;
+        height: 2.5rem;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+    }
 </style>
 
 <!--References below-->
