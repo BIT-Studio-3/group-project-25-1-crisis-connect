@@ -3,7 +3,7 @@
     let streetNumber = "";
     let streetName = "";
     let region = "";
-    let towncity = "";
+    let townCity = "";
     let hazardType = "";
     let description = "";
     let submitted = false;
@@ -17,7 +17,11 @@
 
 <section>
 
-<h2>Post local hazards here</h2><img src="/images/hazard_sign2.png" alt="Hazard sign">
+<div class="container2">
+    <img src="/Images/hazard_sign2.png" alt="Hazard sign" width="5%"/>
+    <h2>Post local hazards here</h2>
+    <img src="/Images/hazard_sign2.png" alt="Hazard sign" width="5%"/>
+</div>
 
 <p><em>Let us know below if you come across any hazards during disasters to help avoid accidents</em></p><br>
 
@@ -41,17 +45,17 @@
             <select bind:value={region}>
                 <option value="Southland">Southland</option>
                 <option value="Otago">Otago</option>
-                <option value="Cantebury">Cantebury</option>
-                <option value="Malborough">Malborough</option>
+                <option value="Canterbury">Canterbury</option>
+                <option value="Marlborough">Marlborough</option>
                 <option value="Nelson">Nelson</option>
                 <option value="Tasman">Tasman</option>
-                <option value="Westcoast">Westcoast</option>
+                <option value="West_coast">West coast</option>
         </div>
 
         <div class="form-group">
             <label for="town/city">Town/City: </label>
-            <select bind:value={towncity}>
-                <option value="Dunedin">Duniden</option>
+            <select bind:value={townCity}>
+                <option value="Dunedin">Dunedin</option>
         </div>
 
         <div class="form-group">
@@ -71,6 +75,7 @@
 
         <div>
             <button class="button1" on:submit={onSubmit}>Submit</button>
+            
         </div>
         
     </form>
@@ -111,8 +116,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height:  20em;
+        height:  400px;
        
+    }
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:  100px;
     }
     input {
         font-size: small;
