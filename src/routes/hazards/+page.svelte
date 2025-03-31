@@ -100,6 +100,10 @@
             <td>{region}</td>
         </tr>
         <tr>
+            <td>Town/City: </td>
+            <td>{townCity}</td>
+        </tr>
+        <tr>
             <td>Hazard: </td>
             <td>{hazardType}</td>
         </tr>
