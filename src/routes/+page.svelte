@@ -22,10 +22,11 @@
 <style>
     .container {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        background-color: #145da0;
-        height:  50em;
+        gap: 1em;
+        margin:auto;
+        margin-bottom: 26em;
     }
 
     form {
@@ -64,4 +65,6 @@
     button {
         margin-left: 0.5em;
     }
+
+
 </style>
