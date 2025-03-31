@@ -10,6 +10,7 @@
 </script>
 
 <section>
+
    <!-- Sidebar Container -->
    <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
     <div class="relative">
@@ -57,6 +58,7 @@
   </div>
   {/if}
 </div>
+  
 </section>
 
 
