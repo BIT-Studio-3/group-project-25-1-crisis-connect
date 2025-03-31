@@ -50,6 +50,7 @@
     }
     input{
         background-color: #ffffff;
+        color: #333;
     }
     button{
         background-color: #b1d4e0;
