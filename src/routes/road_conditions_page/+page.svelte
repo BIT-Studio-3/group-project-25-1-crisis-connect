@@ -24,14 +24,32 @@
       .openPopup();
   });
 </script>
+
+<!-- svelte-ignore a11y-missing-attribute -->
+<html>
+  <head>
+    <title>Simple Map</title>
+  </head>
+  <body>
+    <h1>road_conditions_page</h1>
+
+  </body>
+</html>
  
-<style>
-  #map {
-    text-align: center;
-    width: 100%;
-    height: 800px;
-  }
-</style>
 <section>
 <div id="map" bind:this={mapContainer}></div>
 </section>
+
+<style>
+#map {
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 400px;
+  }
+}
+
+</style>

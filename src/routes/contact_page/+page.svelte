@@ -24,17 +24,24 @@
     }
 </script>
 
+<section>
 <div class="box">
     <h1>Emergency Services</h1><br>
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
     <div class="box2">
         <h4>Click here to register</h4>
     </div>
+
     <!--
     <div class="box3">
         <a href="/C:/Users/ayys/Desktop/project-24-2-JayDos89.pdf" download="my_document.pdf">Download PDF</a>
+</div>
+-->
+    <div class="box2">
+        <h4>Download an offline safe copy</h4> 
+
     </div>
-    -->
+    
 </div>
 <section>
     <br>
@@ -190,6 +197,7 @@
         width: 300px;
         border: 2px solid #2E8BC0;
         margin: 10px;
+        float: left;
     }
     .box{
         padding: 15px;
@@ -213,4 +221,11 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
     }*/
+    }
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 </style>
