@@ -18,9 +18,9 @@
 <section>
 
 <div class="container2">
-    <img src="/Images/hazard_sign2.png" alt="Hazard sign" width="5%"/>
+   
     <h2>Post local hazards here</h2>
-    <img src="/Images/hazard_sign2.png" alt="Hazard sign" width="5%"/>
+    <img src="/Images/hazard_sign2.png" alt="Hazard sign" class="hazard_icon" width="5%"/>
 </div>
 
 <p><em>Let us know below if you come across any hazards during disasters to help avoid accidents</em></p><br>
@@ -116,6 +116,12 @@
 </section>
 
 <style>
+    .hazard_icon {
+        
+        padding-top: 30px;
+        width: 80px;
+        height: auto;
+    }
     .container {
         display: flex;
         justify-content: center;
