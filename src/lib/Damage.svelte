@@ -32,10 +32,6 @@ export let description;
         </section>
 </section>
 
-<h2>{area}</h2>
-<h3>{address}</h3>
-<h3>{type}</h3>
-<p>{description}</p>
 <style>
 
 </style>
