@@ -20,7 +20,7 @@
 <div class="container2">
    
     <h2>Damage report</h2>
-    
+    <img src="/Images/Damage_report_icon.png" alt="Damage report icon" class="Damage_report_icon">
 </div>
 
 <p><em>Please file any damage reports to us directly so we can aid you in future with your insurance claims</em></p><br>
@@ -62,7 +62,7 @@
             <label for="damageType">Damage type: </label>
             <select bind:value={damageType}>
                 <option value="water damage">Water damage</option>
-                <option value="electrical damage">electrical damage</option>
+                <option value="electrical damage">Electrical damage</option>
                 
         </div>
 
@@ -115,10 +115,11 @@
 </section>
 
 <style>
-    .hazard_icon {
+    .Damage_report_icon {
         
-        padding-top: 30px;
-        width: 80px;
+        padding-top: 20px;
+        padding-left: 30px;
+        width: 100px;
         height: auto;
     }
     .container {
@@ -169,14 +170,14 @@
         width: 150px;
     }
     h2 {
-        color:rgb(255, 140, 0);
+        color:rgb(255, 0, 0);
         font-family:'Trebuchet MS';
         font-size: 50px;
         font-weight: 650;
         text-shadow: 2px 2px 2px #000;       
     }
     .button1 {
-        background-color: rgb(255, 140, 0);
+        background-color: rgb(255, 0, 0);
         size: 5px;
         width:5rem;
         height: 2.5rem;
