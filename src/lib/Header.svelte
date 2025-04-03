@@ -10,7 +10,7 @@
 </script>
 
 <section>
-  
+
    <!-- Sidebar Container -->
    <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
     <div class="relative">
@@ -46,6 +46,7 @@
       <li><a class="btn btn-outline btn-primary w-full" href="/fire_and_emergency_page">Fire and Emergency Reports</a></li>
       <li><a class="btn btn-outline btn-primary w-full" href="/rss">RSS Feed</a></li>
       <li><a class="btn btn-outline btn-error w-full" href="/alert_system">⚠️ Post an Alert</a></li>
+      <li><a class="btn btn-outline btn-primary w-full" href="/damage_form">Damage reports(temporary link)</a></li>
       <li><a class="btn btn-outline btn-primary w-full" href="/hazards">Local Hazards (temporary link)</a></li>
     </ul>
     
@@ -59,7 +60,7 @@
   </div>
   {/if}
 </div>
-
+  
 </section>
 
 
