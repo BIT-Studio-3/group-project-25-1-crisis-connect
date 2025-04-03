@@ -170,14 +170,14 @@
         width: 150px;
     }
     h2 {
-        color:blue;
+        color:#ffc72a;
         font-family:'Trebuchet MS';
         font-size: 50px;
         font-weight: 650;
         text-shadow: 2px 2px 2px #000;       
     }
     .button1 {
-        background-color: blue;
+        background-color: #d49c02;
         size: 5px;
         width:5rem;
         height: 2.5rem;
