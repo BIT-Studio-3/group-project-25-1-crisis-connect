@@ -43,7 +43,6 @@
     </div>
     
 </div>
-<section>
     <br>
 
     <p>Enter details below</p><br>
@@ -56,16 +55,21 @@
             <option value="canterbury">Canterbury</option>
             <option value="southland">Southland</option>
         </select><br>
-        
+        <div class = "container2">
         <label for="name">Name
             <input type="text" bind:value={name} id="name">
         </label><br>
+    </div>
+    <div class = "container2">
 
         <label for="role">Role
             <input type="text" bind:value={role} id="role">
         </label>
-        
+    </div>
+    <div class = "container2">
+
         <button type="submit">Save</button>
+    </div>
 
     </form>
 
@@ -190,7 +194,7 @@
 </section>
 <style>
     .container{
-        background: white;
+        background: rgb(0, 0, 0);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -202,6 +206,10 @@
     .box{
         padding: 15px;
         margin: 15px;
+        color:#0c2d48;
+    }
+    select{
+        color:#0c2d48;
     }
     .box2{
         border: 2px solid #0C2D48;
@@ -221,11 +229,16 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
     }*/
-    }
     section{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    input{
+        color: #0c2d48;
+    }
+    .container2{
+        padding-bottom: 1em;
     }
 
 </style>
