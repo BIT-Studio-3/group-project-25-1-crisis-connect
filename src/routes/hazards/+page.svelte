@@ -18,12 +18,13 @@
 <section>
 
 <div class="container2">
-   
     <h2>Post local hazards here</h2>
     <img src="/Images/hazard_sign2.png" alt="Hazard sign" class="hazard_icon" width="5%"/>
 </div>
 
-<p><em>Let us know below if you come across any hazards during disasters to help avoid accidents</em></p><br>
+<div id = "p">
+    <p><em>Let us know below if you come across any hazards during disasters to help avoid accidents</em></p><br>
+</div>
 
 <div class="container">
     <form on:submit|preventDefault={onSubmit}>
@@ -127,6 +128,7 @@
         justify-content: center;
         align-items: center;
         height:  400px;
+        padding: 2em;
        
     }
     .container2 {
@@ -134,6 +136,10 @@
         justify-content: center;
         align-items: center;
         height:  100px;
+        padding: 2em;
+    }
+    #p{
+        padding: 2em;
     }
     input {
         font-size: small;
