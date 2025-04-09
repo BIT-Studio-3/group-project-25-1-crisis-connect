@@ -24,13 +24,15 @@
         />
     </div>
 
-    <p>
-        <em
+    <div id = "p">
+        <p>
+            <em
             >Please file any damage reports to us directly so we can aid you in
             future with your insurance claims</em
-        >
-    </p>
-    <br />
+            >
+        </p>
+    </div>
+  
 
     <div class="container">
         <form on:submit|preventDefault={onSubmit}>
