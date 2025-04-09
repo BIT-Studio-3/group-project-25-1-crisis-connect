@@ -136,9 +136,12 @@
 
 <style>
     .Damage_report_icon {
-        padding-top: 20px;
-        padding-left: 30px;
-        width: 100px;
+        padding-top: 30px;
+        width: 80px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: auto;
     }
     .container {
@@ -149,10 +152,33 @@
     }
     .container2 {
         display: flex;
-        justify-content: center;
         align-items: center;
-        height: 100px;
+        gap: 1rem;
+        flex-wrap: no-wrap;
+        padding: 1rem;
+        justify-content: center;
+        text-align: center;
     }
+    .container2 h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    #p {
+        padding: 0 1em;
+        text-align: center;
+}@media (min-width: 600px) {
+  .container2 {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  #p {
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+  .Damage_report_icon {
+    width: 60px;
+  }
+}
     input {
         font-size: small;
         background-color: aliceblue;
