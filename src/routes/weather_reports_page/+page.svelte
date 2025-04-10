@@ -68,7 +68,12 @@ function closeModal() {
 </section>
  
 <style>
- 
+    h2 {
+        color: #003d7a;
+    }
+    #city {
+        color: #333;
+    }
     /* Modal styling */
     .modal {
         display: flex;
