@@ -94,7 +94,13 @@
         margin: 0.6em;
         display: inline-block;
     }
-
+    h1{
+        font-size: 2.5em;
+        color: #333;
+    }
+    h2 {
+        color: antiquewhite;
+    }
     h3 {
         padding-left: 0.3em;
     }
