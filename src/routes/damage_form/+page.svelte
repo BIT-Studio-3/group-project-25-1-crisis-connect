@@ -168,6 +168,7 @@
     .container2 {
       justify-content: flex-start;
       text-align: left;
+    
     }
     #p {
       text-align: left;
