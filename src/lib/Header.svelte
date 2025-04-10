@@ -50,8 +50,8 @@
     
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Contact Services</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact us "the developers"</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Services contact list</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact the CC dev team</a></li>
     </ul>
   </div>
   {/if}
