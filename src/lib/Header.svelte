@@ -1,9 +1,11 @@
 <svelte:head>
+  
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.11.0/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </svelte:head>
 
 <script>
+  //import './global.css'; 
   import { slide } from "svelte/transition";
   let isSidebarOpen = false;
   const toggleSidebar = () => isSidebarOpen = !isSidebarOpen;
@@ -39,15 +41,20 @@
     <button class="text-2xl cursor-pointer closebtn" on:click={toggleSidebar}>&times;</button>
     <h2 class="text-xl font-semibold mb-4">Live Data</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-primary w-full" href="/weather_reports_page">Weather Reports</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/seismic_reports_page">Seismic Activity</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/road_conditions_page">Road Conditions</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/volcanic_activity_page">Volcanic Activity</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/fire_and_emergency_page">Fire and Emergency Reports</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/rss">RSS Feed</a></li>
-      <li><a class="btn btn-outline btn-error w-full" href="/alert_system">⚠️ Post an Alert</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/damage_form">Damage reports(temporary link)</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/hazards">Local Hazards (temporary link)</a></li>
+      <!--<div class="container">-->
+        <select class="container" onchange="if(this.value) window.location.href=this.value">
+          <label for="hazardType">Hazard type: </label>
+          <option value="/weather_reports_page">Weather Reports</option>
+          <option value="/seismic_reports_page">Seismic Activity</option>
+          <option value="/road_conditions_page">Road Conditions</option>
+          <option value="/volcanic_activity_page">Volcanic Activity</option>
+          <option value="/fire_and_emergency_page">Fire and Emergency Reports</option>
+          <option value="/rss">RSS Feed</option>
+          <option value="/alert_system">⚠️ Post an Alert</option>
+          <option value="/damage_form">Damage reports (temporary link)</option>
+          <option value="/hazards">Local Hazards (temporary link)</option>
+        </select>
+         
     </ul>
     
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
@@ -65,6 +72,10 @@
 
 
 <style>
+  select{
+    color: black;
+  }
+
   section
   {
     display: flex;
@@ -82,7 +93,6 @@
       padding: 0.2 em;
     }
   }
-
 
   img { /* image float right side */
     width: 80px;
@@ -112,4 +122,13 @@
   .sidebar-button.open {
     transform: rotate(180deg);
   }
+  .container {
+        padding-left: 20px;
+        padding-right: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:  40px;
+       
+    }
   </style>
