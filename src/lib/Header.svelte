@@ -48,15 +48,13 @@
           <option value="/volcanic_activity_page">Volcanic Activity</option>
           <option value="/fire_and_emergency_page">Fire and Emergency Reports</option>
           <option value="/rss">RSS Feed</option>
-          <option value="/alert_system">⚠️ Post an Alert</option>
-          <option value="/damage_form">Damage reports (temporary link)</option>
-          <option value="/hazards">Local Hazards (temporary link)</option>
         </select>      
     </ul>
-    <h2 class="text-xl font-semibold mt-6 mb-4">Report Forms</h2>
+    <h2 class="text-xl font-semibold mt-6 mb-4">Reports</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Hazard Form</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Damage Form</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/hazards">Hazard Form</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/damage_form">Damage Form</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/alert_system">Post an Alert</a></li>
     </ul>
 
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
