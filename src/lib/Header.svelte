@@ -1,5 +1,4 @@
 <svelte:head>
-  
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.11.0/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </svelte:head>
@@ -18,7 +17,7 @@
     <div class="relative">
       <!-- Sidebar Toggle Button -->
     <button 
-    class="btn p-2 m-1 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white rounded-full"
+    class="w-10 h-10 m-1 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white  flex items-center justify-center overflow-hidden"
     on:click={toggleSidebar}
     aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
     >
@@ -43,7 +42,6 @@
     <ul class="space-y-2">
       <!--<div class="container">-->
         <select class="container" onchange="if(this.value) window.location.href=this.value">
-          <label for="hazardType">Hazard type: </label>
           <option value="/weather_reports_page">Weather Reports</option>
           <option value="/seismic_reports_page">Seismic Activity</option>
           <option value="/road_conditions_page">Road Conditions</option>
@@ -53,16 +51,18 @@
           <option value="/alert_system">⚠️ Post an Alert</option>
           <option value="/damage_form">Damage reports (temporary link)</option>
           <option value="/hazards">Local Hazards (temporary link)</option>
-        </select>
-         
+        </select>      
     </ul>
-    
+    <h2 class="text-xl font-semibold mt-6 mb-4">Report Forms</h2>
+    <ul class="space-y-2">
+      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Hazard Form</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Damage Form</a></li>
+    </ul>
+
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
     <ul class="space-y-2">
       <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Contact Services</a></li>
       <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact us "the developers"</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/group_chat">Group Communication</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full disabled" href = "/live_chat">Location-based Live Chat (Coming Soon)</a></li>
     </ul>
   </div>
   {/if}
