@@ -3,14 +3,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </svelte:head>
 
-<script>
-  //import './global.css'; 
+<script> 
   import { slide } from "svelte/transition";
   let isSidebarOpen = false;
   const toggleSidebar = () => isSidebarOpen = !isSidebarOpen;
+  // clickOutside.js
+export function clickOutside(node, callback) {
+    const handleClick = event => {
+      if (!node.contains(event.target)) {
+        callback(); // You decide what to do
+      }
+    };
+  
+    document.addEventListener('click', handleClick, true);
+  
+    return {
+      destroy() {
+        document.removeEventListener('click', handleClick, true);
+      }
+    };
+  }
 </script>
 
 <section>
+    {#if isSidebarOpen}
+      <div use:clickOutside={() => isSidebarOpen = false} class="sidebar">
+        ...
+      </div>
+    {/if}
 
    <!-- Sidebar Container -->
    <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
