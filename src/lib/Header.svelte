@@ -8,7 +8,7 @@
   let isSidebarOpen = false;
   const toggleSidebar = () => isSidebarOpen = !isSidebarOpen;
   // clickOutside.js
-export function clickOutside(node, callback) {
+  export function clickOutside(node, callback) {
     const handleClick = event => {
       if (!node.contains(event.target)) {
         callback(); // You decide what to do
@@ -23,14 +23,10 @@ export function clickOutside(node, callback) {
       }
     };
   }
+  
 </script>
 
 <section>
-    {#if isSidebarOpen}
-      <div use:clickOutside={() => isSidebarOpen = false} class="sidebar">
-        ...
-      </div>
-    {/if}
 
    <!-- Sidebar Container -->
    <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
@@ -56,7 +52,10 @@ export function clickOutside(node, callback) {
   
   <!-- Sidebar Content with Slide Transition -->
   {#if isSidebarOpen}
-  <div transition:slide class="sidebar">
+  <div
+    transition:slide
+    use:clickOutside={() => isSidebarOpen = false} 
+    class="sidebar">
     <button class="text-2xl cursor-pointer closebtn" on:click={toggleSidebar}>&times;</button>
     <h2 class="text-xl font-semibold mb-4">Live Data</h2>
     <ul class="space-y-2">
@@ -87,7 +86,6 @@ export function clickOutside(node, callback) {
 </div>
   
 </section>
-
 
 <style>
   select{
