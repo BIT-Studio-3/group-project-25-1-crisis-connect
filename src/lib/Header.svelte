@@ -55,8 +55,8 @@
   <div
     transition:slide
     use:clickOutside={() => isSidebarOpen = false} 
-    class="sidebar">
-    <button class="text-2xl cursor-pointer closebtn" on:click={toggleSidebar}>&times;</button>
+    class="sidebar" flex flex-col items-center>
+   
     <h2 class="text-xl font-semibold mb-4">Live Data</h2>
     <ul class="space-y-2">
       <!--<div class="container">-->
@@ -123,10 +123,13 @@
     left: 0;
     height: 100%;
     width: 16rem; /* w-64 */
-    background-color: #b1d4e0; /* Darker base color */
+    background-color: #74a7d5; /* Darker base color */
+    background: linear-gradient(to right, #3b82f6, #76aad9, #1c3b71); /* blue → purple → pink */
     color: white;
-    padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    
+    padding-left: 1.3rem;
+    border-radius: 12px;
+    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 9999;
   }
 
