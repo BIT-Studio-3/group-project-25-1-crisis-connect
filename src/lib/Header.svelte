@@ -129,7 +129,7 @@
     background: linear-gradient(to right, #3b82f6, #76aad9, #1c3b71); /* blue → purple → pink */
     color: rgb(118, 5, 5);
     padding-left: 0rem;
-    border-radius: 12px;
+    border-radius: 0px;
     box-shadow: 10px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 9999;
   }
@@ -149,7 +149,6 @@
         justify-content: center;
         align-items: center;
         height:  40px;
-        color: #2e8bc0;
-       
+        color: #2e8bc0;      
     }
   </style>
