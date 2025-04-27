@@ -1,28 +1,24 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
+  min-height: 100vh;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-    
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100% ;
-
-    background-image: url('/Images/bg.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
+  display: flex;
+  flex-direction: column;
+  
+  background-image: url('/Images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; 
+  
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
 
 
 h2 {
@@ -61,7 +57,6 @@ section {
     width: 100%;
     margin: 50px auto;
     transition: all 0.3 ease;
-
   }
 a {
     color: #b1d4e0;
