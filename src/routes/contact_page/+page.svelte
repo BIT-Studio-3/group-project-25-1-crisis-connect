@@ -26,17 +26,17 @@
         }
 
         if (workPhone.trim()) {
-    workPhones = [...workPhones, workPhone];
-    workPhone = '';
-}
-
+           workPhones = [...workPhones, workPhone];
+           workPhone = '';
         }
+
     }
 </script>
 
 <section>
+
+        <h2>Emergency Services</h2>
     
-    <h1>Emergency Services</h1>
     <!--
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
     <div class="box2">
@@ -51,34 +51,34 @@
     
 </div>
 -->
-
-    <p>Enter details below</p><br>
+<div  class ="form">
+    <p>Enter details below</p>
+    
     <form on:submit={addDetails}>
         
         <label for="type">Region:</label>
-
+    
         <select bind:value={region} id="region">   
             <option value="otago">Otago</option>
             <option value="canterbury">Canterbury</option>
             <option value="southland">Southland</option>
         </select><br>
-        <div class = "container2">
+        
         <label for="name">Name
             <input type="text" bind:value={name} id="name">
         </label><br>
-    </div>
-    <div class = "container2">
+    
 
         <label for="role">Role
             <input type="text" bind:value={role} id="role">
         </label>
-    </div>
-    <div class = "container2">
-
+        
         <button type="submit">Save</button>
-    </div>
+        
+        
+        </form>
+</div>
 
-    </form>
 
 <div class="container">
     <h2>The Police</h2><br>
@@ -200,6 +200,11 @@
 </div>
 </section>
 <style>
+    
+    select{
+        color:#0c2d48;
+    }
+    /*
     .container{
         background: rgb(0, 0, 0);
         padding: 20px;
@@ -210,10 +215,6 @@
         margin: 10px;
         float: left;
     }
-    select{
-        color:#0c2d48;
-    }
-    /*
     .box{
         padding: 15px;
         margin: 15px;
@@ -246,8 +247,5 @@
     input{
         color: #0c2d48;
     }
-    .container2{
-        padding-bottom: 1em;
-    }
-
+   
 </style>
