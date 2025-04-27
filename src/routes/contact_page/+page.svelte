@@ -73,6 +73,10 @@
             <input type="text" bind:value={role} id="role">
         </label>
         
+        <label for="workPhone">Work Phone
+            <input type="text" bind:value={workPhone} id="workPhone">
+        </label>
+
         <button type="submit">Save</button>
         
         
