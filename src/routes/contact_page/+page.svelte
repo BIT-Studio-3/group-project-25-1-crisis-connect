@@ -6,12 +6,15 @@
     let names = [];
     let role = '';
     let roles = [];
+    let workPhone= '';
+    let workPhones =[];
     
     function addDetails(event){
         event.preventDefault();
         
             if (region.trim()){
             regions = [...regions, region];
+            region= '';
         }
             if (name.trim()){
             names = [...names, name];
@@ -21,12 +24,19 @@
             roles = [...roles, role];
             role = '';
         }
+
+        if (workPhone.trim()) {
+    workPhones = [...workPhones, workPhone];
+    workPhone = '';
+}
+
+        }
     }
 </script>
 
 <section>
-    <div class="box">
-    <h1>Emergency Services</h1><br>
+    
+    <h1>Emergency Services</h1>
     <!--
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
     <div class="box2">
@@ -41,9 +51,6 @@
     
 </div>
 -->
-    
-</div>
-    <br>
 
     <p>Enter details below</p><br>
     <form on:submit={addDetails}>
@@ -203,12 +210,13 @@
         margin: 10px;
         float: left;
     }
+    select{
+        color:#0c2d48;
+    }
+    /*
     .box{
         padding: 15px;
         margin: 15px;
-        color:#0c2d48;
-    }
-    select{
         color:#0c2d48;
     }
     .box2{
@@ -219,7 +227,7 @@
         background-color: #f9f9f9;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
-    }/*
+    }
     .box3{
         border: 2px solid #0084ff;
         border-radius: 8px;
@@ -228,12 +236,13 @@
         background-color: #f9f9f9;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 5px;
-    }*/
+    }
     section{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+    */
     input{
         color: #0c2d48;
     }
