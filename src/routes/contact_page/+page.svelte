@@ -25,22 +25,22 @@
 </script>
 
 <section>
-<div class="box">
+    <div class="box">
     <h1>Emergency Services</h1><br>
+    <!--
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
     <div class="box2">
         <h4>Click here to register</h4>
     </div>
 
-    <!--
     <div class="box3">
         <a href="/C:/Users/ayys/Desktop/project-24-2-JayDos89.pdf" download="my_document.pdf">Download PDF</a>
 </div>
+<div class="box2">
+    <h4>Download an offline safe copy</h4> 
+    
+</div>
 -->
-    <div class="box2">
-        <h4>Download an offline safe copy</h4> 
-
-    </div>
     
 </div>
     <br>
