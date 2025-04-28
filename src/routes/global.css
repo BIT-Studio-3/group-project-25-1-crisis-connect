@@ -1,13 +1,26 @@
-body{
-    background-image: url('/Images/bg.jpg'); 
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  
+  background-image: url('/Images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; 
+  
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
 h2 {
     color: #333; 
     font-size: 2.5rem;
@@ -44,7 +57,6 @@ section {
     width: 100%;
     margin: 50px auto;
     transition: all 0.3 ease;
-
   }
 a {
     color: #b1d4e0;
@@ -60,7 +72,6 @@ a:hover {
       width: 90%;
       margin: 30px auto;
     }
-    
     ul {
       width: 90%;
       padding: 15px;

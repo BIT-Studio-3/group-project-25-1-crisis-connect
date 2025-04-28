@@ -27,7 +27,7 @@
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
         margin-top: 40px;
     }
- 
+
     footer p {
         text-align: center;
         margin: 5px 0;
