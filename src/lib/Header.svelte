@@ -10,9 +10,9 @@
 </script>
 
 <section>
-  
+
    <!-- Sidebar Container -->
-   <img src = "src/images/logo.png" alt = "Connect Criss logo"/>
+   <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
     <div class="relative">
       <!-- Sidebar Toggle Button -->
     <button 
@@ -46,17 +46,19 @@
       <li><a class="btn btn-outline btn-primary w-full" href="/fire_and_emergency_page">Fire and Emergency Reports</a></li>
       <li><a class="btn btn-outline btn-primary w-full" href="/rss">RSS Feed</a></li>
       <li><a class="btn btn-outline btn-error w-full" href="/alert_system">⚠️ Post an Alert</a></li>
+      <li><a class="btn btn-outline btn-primary w-full" href="/damage_form">Damage reports(temporary link)</a></li>
+      <li><a class="btn btn-outline btn-primary w-full" href="/hazards">Local Hazards (temporary link)</a></li>
     </ul>
     
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Services contact list</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact the CC dev team</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Contact Services</a></li>
+      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact us "the developers"</a></li>
     </ul>
   </div>
   {/if}
 </div>
-
+  
 </section>
 
 
@@ -67,15 +69,23 @@
     justify-content: space-between;
     align-items: center;
     background-color:#b1d4e0;
-    padding: 2em;
+    padding: 0.5em;
     flex-direction:row-reverse;
-    border: 2px solid rgb(91, 90, 160);
+    border: 2px solid #2e8bc0  ;
+  }@media only screen and (max-width: 400px) {
+    section {
+      flex-direction:row-reverse;
+      justify-content: space-between;
+      align-items : center;
+      padding: 0.2 em;
+    }
   }
+
+
   img { /* image float right side */
-    
     width: 80px;
     height: auto;
-    float: left;
+  
     text-align: center;
   }
   /* Sidebar styles */
@@ -85,7 +95,7 @@
     left: 0;
     height: 100%;
     width: 16rem; /* w-64 */
-    background-color: #1e293b; /* Darker base color */
+    background-color: #b1d4e0; /* Darker base color */
     color: white;
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
