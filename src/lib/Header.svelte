@@ -54,8 +54,6 @@
     <ul class="space-y-2">
       <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Contact Services</a></li>
       <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact us "the developers"</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/group_chat">Group Communication</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full disabled" href = "/live_chat">Location-based Live Chat (Coming Soon)</a></li>
     </ul>
   </div>
   {/if}
