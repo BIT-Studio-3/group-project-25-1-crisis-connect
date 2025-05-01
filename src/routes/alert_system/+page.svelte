@@ -1,24 +1,22 @@
 <section>
   <h1>Alerts</h1>
   <p>
-    This where users will be able to post alerts. They will be able to choose
-    emergency type, level, and region.
+    This is where users will be able to post alerts. They will be able to choose
+     the emergency type, level, and region.
   </p>
   <p>
     Alerts will show up in a feed on another page. This form currently does
-    nothing. Once we learn more about logins, this page will be functional.
+     nothing. Once we learn more about logins, this page will be functional.
   </p>
 
   <form>
     <h2>Post Alert:</h2>
-    <div class="container">
+    <div class="form-container">
       <label for="title">Title:</label>
-
       <input type="text" id="title" name="alert-title" />
 
       <label for="type">Emergency type:</label>
-
-      <select for="type" id="type">
+      <select id="type" name="type" class="select_color">
         <option value="">Please select an emergency type</option>
         <option value="fire">Fire</option>
         <option value="flood">Flooding</option>
@@ -26,8 +24,7 @@
       </select>
 
       <label for="level">Select alert level:</label>
-
-      <select name="level" id="level">
+      <select name="level" id="level" class="select_color">
         <option value="one">1</option>
         <option value="two">2</option>
         <option value="three">3</option>
@@ -36,8 +33,7 @@
       </select>
 
       <label for="region">Choose Region:</label>
-
-      <select name="region" id="region">
+      <select name="region" id="region" class="select_color">
         <option value="">Please select a region</option>
         <option value="otago">Otago</option>
         <option value="canterbury">Canterbury</option>
@@ -45,64 +41,108 @@
       </select>
 
       <label for="description">Description:</label>
-
-      <textarea id="description" name="description"></textarea>
+      <textarea id="description" name="description" class="select_color"></textarea>
     </div>
-    <div>
+    <div class="submit-container">
       <button type="submit">Submit</button>
     </div>
   </form>
 </section>
 
 <style>
-  textarea {
-    vertical-align: top;
-    height: 10em;
-    width: 25em;
+  p {
+    margin-bottom: 1.5em;
+    font-size: larger;
+  }
+  h1{
+    font-size: 2.5em;
+    color: #003d7a;
+  }
+  h2{
+    color: #ffffff;
+  }
+  .select_color {
+    color: #333;
   }
   form {
-    border-color: black;
-    border: solid;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
-  label {
-    text-align: right;
-    justify-content: center;
-    padding-top: 10px;
-  }
-  div {
-    padding: 0.5em;
-  }
-  .container {
+
+  .form-container {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
   }
-  input {
-    max-width: fit-content;
-    margin: 0.5em;
+
+  label {
+    color: #b1d4e0;
+    align-self: center;
+    font-size: larger;
+    font-weight: bold;
   }
-  select {
-    max-width: fit-content;
-    margin: 0.5em;
+
+  input, select, textarea {
+    padding: 0.8em;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
   }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
   textarea {
-    margin: 0.5em;
+    height: 150px;
+    width: 100%;
+    resize: vertical;
   }
+
+  .submit-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    padding: 0.8em 2em;
+    font-size: 1.1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button:active {
+    background-color: #003d7a;
+  }
+
   @media (max-width: 1281px) {
-    .container {
-      display: block;
+    .form-container {
+      grid-template-columns: 1fr;
     }
-    textarea {
-      width: auto;
-    }
+
     label {
-      align-self: center;
+      text-align: left;
+    }
+
+    input, select, textarea {
+      width: 100%;
     }
   }
-  
+
   @media (max-width: 600px) {
-    form {
-      padding: 1em;
+    section {
+      padding: 10px;
     }
 
     input, select, textarea {
@@ -111,6 +151,7 @@
 
     button {
       width: 100%;
+      padding: 1em;
     }
   }
 </style>
