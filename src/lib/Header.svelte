@@ -26,7 +26,7 @@
   
 </script>
 
-<section>
+<section class="border">
 
    <!-- Sidebar Container -->
    <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
@@ -88,6 +88,9 @@
 </section>
 
 <style>
+  h2{
+    font-size: 30px;
+  }
   select{
     color: black;
   }
@@ -156,6 +159,10 @@
       background-color: transparent;
     }
     li {
+      border-color: antiquewhite;
+    }
+    .border{
+      border-width: 5px;
       border-color: antiquewhite;
     }
   </style>
