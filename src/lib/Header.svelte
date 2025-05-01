@@ -3,20 +3,37 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </svelte:head>
 
-<script>
+<script> 
   import { slide } from "svelte/transition";
   let isSidebarOpen = false;
   const toggleSidebar = () => isSidebarOpen = !isSidebarOpen;
+  // clickOutside.js
+  export function clickOutside(node, callback) {
+    const handleClick = event => {
+      if (!node.contains(event.target)) {
+        callback(); // You decide what to do
+      }
+    };
+  
+    document.addEventListener('click', handleClick, true);
+  
+    return {
+      destroy() {
+        document.removeEventListener('click', handleClick, true);
+      }
+    };
+  }
+  
 </script>
 
-<section>
+<section class="border">
 
    <!-- Sidebar Container -->
    <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
     <div class="relative">
       <!-- Sidebar Toggle Button -->
     <button 
-    class="btn p-2 m-1 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white rounded-full"
+    class="w-10 h-10 m-1 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white  flex items-center justify-center overflow-hidden"
     on:click={toggleSidebar}
     aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
     >
@@ -35,25 +52,35 @@
   
   <!-- Sidebar Content with Slide Transition -->
   {#if isSidebarOpen}
-  <div transition:slide class="sidebar">
-    <button class="text-2xl cursor-pointer closebtn" on:click={toggleSidebar}>&times;</button>
+  <div
+    transition:slide
+    use:clickOutside={() => isSidebarOpen = false} 
+    class="sidebar" flex flex-col items-center>
+   
     <h2 class="text-xl font-semibold mb-4">Live Data</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-primary w-full" href="/weather_reports_page">Weather Reports</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/seismic_reports_page">Seismic Activity</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/road_conditions_page">Road Conditions</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/volcanic_activity_page">Volcanic Activity</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/fire_and_emergency_page">Fire and Emergency Reports</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/rss">RSS Feed</a></li>
-      <li><a class="btn btn-outline btn-error w-full" href="/alert_system">⚠️ Post an Alert</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/damage_form">Damage reports(temporary link)</a></li>
-      <li><a class="btn btn-outline btn-primary w-full" href="/hazards">Local Hazards (temporary link)</a></li>
+      <!--<div class="container">-->
+        <select class="container" onchange="if(this.value) window.location.href=this.value">
+          <option value="/weather_reports_page">Weather Reports</option>
+          <option value="/seismic_reports_page">Seismic Activity</option>
+          <option value="/road_conditions_page">Road Conditions</option>
+          <option value="/volcanic_activity_page">Volcanic Activity</option>
+          <option value="/fire_and_emergency_page">Fire and Emergency Reports</option>
+          <option value="/rss">RSS Feed</option>
+        </select>      
     </ul>
-    
+    <h2 class="text-xl font-semibold mt-6 mb-4">Reports</h2>
+    <ul class="space-y-2">
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded no-underline" href="/hazards" on:click={() => isSidebarOpen = false}>Hazard Form</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/damage_form" on:click={() => isSidebarOpen = false}>Damage Form</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/alert_system" on:click={() => isSidebarOpen = false}>Post an Alert</a></li>
+    </ul>
+
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page">Contact Services</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact">Contact us "the developers"</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/contact_page" on:click={() => isSidebarOpen = false}>Contact Services</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/developer_contact" >Contact us "the developers"</a></li>
+
     </ul>
   </div>
   {/if}
@@ -61,8 +88,14 @@
   
 </section>
 
-
 <style>
+  h2{
+    font-size: 30px;
+  }
+  select{
+    color: black;
+  }
+
   section
   {
     display: flex;
@@ -81,7 +114,6 @@
     }
   }
 
-
   img { /* image float right side */
     width: 80px;
     height: auto;
@@ -93,12 +125,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 16rem; /* w-64 */
-    background-color: #b1d4e0; /* Darker base color */
-    color: white;
-    padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    width: 20rem; /* w-64 */
+    background-color: #74a7d5; /* Darker base color */
+    background: linear-gradient(to right, #73a5f7, #5e6c84); /* blue → purple → pink */
+    color: rgb(118, 5, 5);
+    padding-left: 0rem;
+    border-radius: 0px;
+    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 9999;
   }
 
@@ -110,4 +146,24 @@
   .sidebar-button.open {
     transform: rotate(180deg);
   }
+  .container {
+        padding-left: 20px;
+        padding-right: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:  40px;
+        color: #2e8bc0;
+      
+    }
+    ul {
+      background-color: transparent;
+    }
+    li {
+      border-color: antiquewhite;
+    }
+    .border{
+      border-width: 5px;
+      border-color: antiquewhite;
+    }
   </style>
