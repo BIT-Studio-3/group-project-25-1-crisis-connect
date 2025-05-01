@@ -71,15 +71,15 @@
     </ul>
     <h2 class="text-xl font-semibold mt-6 mb-4">Reports</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-secondary w-full" href="/hazards" on:click={() => isSidebarOpen = false}>Hazard Form</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/damage_form" on:click={() => isSidebarOpen = false}>Damage Form</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/alert_system" on:click={() => isSidebarOpen = false}>Post an Alert</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded no-underline" href="/hazards" on:click={() => isSidebarOpen = false}>Hazard Form</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/damage_form" on:click={() => isSidebarOpen = false}>Damage Form</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/alert_system" on:click={() => isSidebarOpen = false}>Post an Alert</a></li>
     </ul>
 
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
     <ul class="space-y-2">
-      <li><a class="btn btn-outline btn-secondary w-full" href="/contact_page" on:click={() => isSidebarOpen = false}>Contact Services</a></li>
-      <li><a class="btn btn-outline btn-secondary w-full" href="/developer_contact" >Contact us "the developers"</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/contact_page" on:click={() => isSidebarOpen = false}>Contact Services</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/developer_contact" >Contact us "the developers"</a></li>
     </ul>
   </div>
   {/if}
@@ -122,11 +122,11 @@
     top: 0;
     left: 0;
     height: auto;
-    max-height: 90vh;
+    min-height: 100%;
     overflow-y: auto;
     width: 20rem; /* w-64 */
     background-color: #74a7d5; /* Darker base color */
-    background: linear-gradient(to right, #3b82f6, #76aad9, #1c3b71); /* blue → purple → pink */
+    background: linear-gradient(to right, #73a5f7, #5e6c84); /* blue → purple → pink */
     color: rgb(118, 5, 5);
     padding-left: 0rem;
     border-radius: 0px;
@@ -151,5 +151,11 @@
         height:  40px;
         color: #2e8bc0;
       
+    }
+    ul {
+      background-color: transparent;
+    }
+    li {
+      border-color: antiquewhite;
     }
   </style>
