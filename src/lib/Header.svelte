@@ -79,6 +79,7 @@
     <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
     <ul class="space-y-2">
       <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/contact_page" on:click={() => isSidebarOpen = false}>Contact Services</a></li>
+      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/task_cards" on:click={() => isSidebarOpen = false}>Task Cards</a></li>
       <!-- <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/developer_contact" >Contact us "the developers"</a></li> -->
 
     </ul>
