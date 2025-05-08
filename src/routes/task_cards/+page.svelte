@@ -10,8 +10,11 @@
 <p></p>
 
 <div class="cardcontainer2">
-    Add
+
+<div class = "Icon">
+    <p>Add</p>
     <img src="/Images/Add_icon.png" alt="Hazard sign" class="hazard_icon" />
+</div>
     <div class="container">
         <h2>Help needed</h2><br>
         <ul>
