@@ -1,25 +1,49 @@
 <script>
     import Cards from '$lib/Cards.svelte';
+    let title = '';
+    let titles = [];
+    let date = '';
+    let dates = [];
+    let showAddCard = false;
+
+    function addCard() {
+    console.log("New Card");
+    showAddCard = true;
+
+  }
 </script>
 
 <section>
 
     <h2>Task Allocation</h2><br>
 
-
     <h3>Recent Activity: </h3>
-
 
 <Cards />
 
 <div class="container">
-    <img src="/Images/Add_icon.png" alt="Hazard sign" class="hazard_icon" width="32" />
+    <form on:submit|preventDefault={addCard}>
+        <button class="button1" type="submit">
+            <img src="/Images/Add_icon.png" alt="Hazard sign" class="hazard_icon" width="32" />
+        </button>
+    </form>    
     <h3>Add New Card<h3>
 </div>
 
+{#if showAddCard}
+    <table class="table" style width="100%">
+      <tr>
+        <td>Title: </td>
+        <td>{titles}</td>
+      </tr>
+      <tr>
+        <td>Date: </td>
+        <td>{dates}</td>
+      </tr>
+    </table>
+  {/if}
 
 </section>
-
 
 <style>
     h2 {
