@@ -2,8 +2,12 @@
     import Cards from '$lib/Cards.svelte';
     let title = '';
     let titles = [];
-    let date = '';
-    let dates = [];
+    let postDate = '';
+    let postDates = [];
+    let location = '';
+    let locations = [];
+    let skill = '';
+    let skills = [];
     let showAddCard = false;
 
     function addCard() {
@@ -38,7 +42,15 @@
       </tr>
       <tr>
         <td>Date: </td>
-        <td>{dates}</td>
+        <td>{postDate}</td>
+      </tr>
+      <tr>
+        <td>location: </td>
+        <td>{location}</td>
+      </tr>
+      <tr>
+        <td>Requirements: </td> <!--Field does not need to be filled to submit-->
+        <td>{skill}</td>
       </tr>
     </table>
   {/if}
