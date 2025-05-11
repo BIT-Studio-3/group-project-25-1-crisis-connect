@@ -41,18 +41,18 @@
             <tr class="form-group">
                 <label for="date">Title: </label>
                 <input type="text" id="date" required bind:value={title} />
-            </tr>       
+            </tr><br>     
             <tr class="form-group">
                 <label for="date">Date: </label>
                 <input type="date" id="date" required bind:value={postDate} />
-            </tr>
-            <tr>
+            </tr><br>
+            <tr class="form-group">
                 <td>location: </td>
-                <td>{location}</td>
-            </tr>
-            <tr>
+                <input type="combobox" id="location" required bind:value={location} />
+            </tr><br>
+            <tr class="form-group">
                 <td>Requirements: </td> <!--Field does not need to be filled to submit-->
-                <td>{skill}</td>
+                <input type="text" id="requirements" required bind:value={skill} />
             </tr>
         </table>
         </form>
@@ -71,7 +71,8 @@
     text-shadow: 2px 2px 2px #000;
   }
     h3 {
-        font-size: large;
+        font-size: px;
+        font-weight: bold;
     }
 
     .container {
@@ -87,11 +88,11 @@
   }
 
   .container2 {
+        display: flex;
         border-radius: 5px;
         background-color: rgb(52, 131, 200, 0.5);
-        display: flex;
         align-items:flex-start;
-        gap: 1rem;
+        gap: 5rem;
         flex-wrap: no-wrap;
         padding: 1rem;
         justify-content: left;
@@ -99,21 +100,29 @@
   }
   form {
     display: grid;
+    align-items: center;
+    justify-content: flex-start;
     gap: 20px;
     border: 2px;
+    border-radius: 10px;
   }
 
   .form-group {
-    display: grid;
+    display: flex;   
+    justify-content: flex-start;
     grid-template-columns: 2fr 2fr;
     align-items: center;
+    border-radius: 2px;
   }
 
   label {
-    color: #000;
+    color: #ffffff;
   }
 
   input {
     color: #000;
+    border-radius: 5px;
+    padding: 1;
+    
   }
 </style>
