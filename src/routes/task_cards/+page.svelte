@@ -32,28 +32,33 @@
         </button>
     </form>    
     <h3>Add New Card<h3>
-</div>
+</div><br>
 
 {#if showAddCard}
-    <table class="table" style width="100%">
-      <tr>
-        <td>Title: </td>
-        <td>{titles}</td>
-      </tr>
-      <tr>
-        <td>Date: </td>
-        <td>{postDate}</td>
-      </tr>
-      <tr>
-        <td>location: </td>
-        <td>{location}</td>
-      </tr>
-      <tr>
-        <td>Requirements: </td> <!--Field does not need to be filled to submit-->
-        <td>{skill}</td>
-      </tr>
-    </table>
-  {/if}
+    <div class="container2">
+        <form on:submit|preventDefault={addCard}>
+        <table class="table" style width="100%">       
+            <tr class="form-group">
+                <label for="date">Title: </label>
+                <input type="text" id="date" required bind:value={title} />
+            </tr>       
+            <tr class="form-group">
+                <label for="date">Date: </label>
+                <input type="date" id="date" required bind:value={postDate} />
+            </tr>
+            <tr>
+                <td>location: </td>
+                <td>{location}</td>
+            </tr>
+            <tr>
+                <td>Requirements: </td> <!--Field does not need to be filled to submit-->
+                <td>{skill}</td>
+            </tr>
+        </table>
+        </form>
+    </div>
+{/if}
+
 
 </section>
 
@@ -79,5 +84,36 @@
         padding: 1rem;
         justify-content: left;
         text-align: center;
+  }
+
+  .container2 {
+        border-radius: 5px;
+        background-color: rgb(52, 131, 200, 0.5);
+        display: flex;
+        align-items:flex-start;
+        gap: 1rem;
+        flex-wrap: no-wrap;
+        padding: 1rem;
+        justify-content: left;
+        text-align: left;
+  }
+  form {
+    display: grid;
+    gap: 20px;
+    border: 2px;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+  }
+
+  label {
+    color: #000;
+  }
+
+  input {
+    color: #000;
   }
 </style>
