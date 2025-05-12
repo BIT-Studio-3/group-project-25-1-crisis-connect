@@ -54,6 +54,24 @@
       { coords: [170.56150302579226, -45.87123707844707], label: "Shark Attack"},
     ];
 
+    points.forEach(({ coords, label }) => {
+      const point = new Point({ longitude: coords[0], latitude: coords[1] });
+
+      // Red Marker Symbol
+      const pointSymbol = {
+        type: "picture-marker", 
+        url: "/Images/pin2.png",
+        width: "24px", 
+        height: "40px",
+        
+      };
+
+      // Add the point as a graphic with red marker symbol
+      graphicsLayer.add(new Graphic({
+        geometry: point,
+        symbol: pointSymbol
+      }));
+
   });
 </script>
 
