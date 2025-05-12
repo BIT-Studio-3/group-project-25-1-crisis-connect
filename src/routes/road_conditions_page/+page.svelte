@@ -41,6 +41,19 @@
     const homeWidget = new Home({ view });
     view.ui.add(homeWidget, "top-left");
 
+    const points = [
+      { coords: [170.5195, -45.8659], label: "Otago Polytech" },
+      { coords: [170.5196, -45.8652], label: "Vaughn Attack" },
+      { coords: [170.4958, -45.8804], label: "OtagoCDEM" },
+      { coords: [170.5020, -45.8744], label: "Emergency Operations Centre" },
+      { coords: [170.32762846702468, -45.94930979874042], label: "Brighton Hall" },
+      { coords: [170.62147469142226, -45.84871779750973], label: "Broad Bay Community Centre" },
+      { coords: [170.50294148580366,-45.87285713658329], label: "Dunedin Town Hall" },
+      { coords: [170.50297628403, -45.87337915409424], label: "Dunedin Centre" },
+      { coords: [170.38776715568994, -45.8768017971585], label:"Zombie Attack"},
+      { coords: [170.56150302579226, -45.87123707844707], label: "Shark Attack"},
+    ];
+
   });
 </script>
 
