@@ -13,8 +13,7 @@
     function addCard() {
     console.log("New Card");
     showAddCard = true;
-
-  }
+     }
 </script>
 
 <section>
@@ -35,30 +34,24 @@
 </div><br>
 
 {#if showAddCard}
-    <div class="container2">
+    <div class="container">
         <form on:submit|preventDefault={addCard}>
-        <table class="table" style width="100%">       
-            <tr class="form-group">
-                <label for="date">Title: </label>
-                <input type="text" id="date" required bind:value={title} />
-            </tr><br>     
-            <tr class="form-group">
+            <table class="table" style width="100%">                      
+                <label for="title">Title: </label>
+                <input type="text" id="title" required bind:value={title} />
+                                    
                 <label for="date">Date: </label>
-                <input type="date" id="date" required bind:value={postDate} />
-            </tr><br>
-            <tr class="form-group">
-                <td>location: </td>
-                <input type="combobox" id="location" required bind:value={location} />
-            </tr><br>
-            <tr class="form-group">
-                <td>Requirements: </td> <!--Field does not need to be filled to submit-->
-                <input type="text" id="requirements" required bind:value={skill} />
-            </tr>
-        </table>
+                <input type="date" id="date" required bind:value={postDate} />                
+                
+                <label for="location">Location: </label>
+                <input type="address" id="location" required bind:value={location} />                
+                
+                <label for="skill">Requirements: </label> <!--Field does not need to be filled to submit-->
+                <input type="text" id="requirements" required bind:value={skill} />               
+            </table>
         </form>
     </div>
 {/if}
-
 
 </section>
 
@@ -80,18 +73,18 @@
         background-color: rgb(52, 131, 200, 0.5);
         display: flex;
         align-items:flex-start;
-        gap: 1rem;
-        flex-wrap: no-wrap;
+        gap: 1rem;     
         padding: 1rem;
-        justify-content: left;
+        justify-content: left;        
         text-align: center;
   }
 
-  .container2 {
+    .container2 {
         display: flex;
         border-radius: 5px;
         background-color: rgb(52, 131, 200, 0.5);
         align-items:flex-start;
+        align-content: flex-start;
         gap: 5rem;
         flex-wrap: no-wrap;
         padding: 1rem;
@@ -100,19 +93,13 @@
   }
   form {
     display: grid;
-    align-items: center;
-    justify-content: flex-start;
     gap: 20px;
     border: 2px;
-    border-radius: 10px;
   }
-
   .form-group {
-    display: flex;   
-    justify-content: flex-start;
-    grid-template-columns: 2fr 2fr;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
     align-items: center;
-    border-radius: 2px;
   }
 
   label {
@@ -124,5 +111,16 @@
     border-radius: 5px;
     padding: 1;
     
+  }
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    align-content: flex-start;
+    justify-content: space-around;
+    table-layout: auto;
+    width:fit-content;
+    height: 300px;
   }
 </style>
