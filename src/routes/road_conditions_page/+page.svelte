@@ -1,12 +1,5 @@
 <script>
-  //I have downloaded the dependencies of leaflet using
-  //npm install leaflet in the git bash
-  //Importing leaflet 'L' from the downloaded dependency with its css
-  import L from "leaflet";
-  import "leaflet/dist/leaflet.css";
-//Import the onMount function from the Svelte
   import { onMount } from "svelte";
-  //Declaring the 'let' variable to hold reference of the map container
   let mapContainer;
 
   onMount(async () => {
@@ -27,7 +20,7 @@
       url: "https://data.linz.govt.nz/services;key=846b31609e5947cfb627eb8135b8e9a3/wmts/1.0.0/layer/50767/WMTSCapabilities.xml",
       subdomains: ["a", "b", "c", "d"],
     });
- 
+
     const view = new MapView({
       container: mapContainer,
       map: {
@@ -97,21 +90,12 @@
   });
 </script>
 
-<!-- svelte-ignore a11y-missing-attribute -->
 <section>
-<div id="map" bind:this={mapContainer}></div>
+<div bind:this={mapContainer} class="view"></div>
 </section>
-
 <style>
-#map {
-  width: 100%;
-  height: 600px;
-}
-
-@media (max-width: 768px) {
-  #map {
-    height: 400px;
+  .view {
+    height: 600px;
+    width: 100%;
   }
-}
-
 </style>
