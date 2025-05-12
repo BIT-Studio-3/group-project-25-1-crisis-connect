@@ -72,6 +72,28 @@
         symbol: pointSymbol
       }));
 
+      // Text symbol for the label
+      const textSymbol = {
+        type: "text",
+        color: "black",
+        haloColor: "white",
+        haloSize: "2px",
+        text: label,
+        font: {
+          size: 10,
+        },
+        horizontalAlignment: "left",
+        verticalAlignment: "middle",
+        xoffset: 10,
+        yoffset: -1,
+      };
+
+      // Add the label as a graphic
+      graphicsLayer.add(new Graphic({
+        geometry: point,
+        symbol: textSymbol
+      }));
+    });
   });
 </script>
 
