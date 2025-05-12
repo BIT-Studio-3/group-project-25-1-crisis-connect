@@ -8,15 +8,25 @@
   import { onMount } from "svelte";
   //Declaring the 'let' variable to hold reference of the map container
   let mapContainer;
-  //Ensure it runs after the component is mounted in DOM
-  onMount(() => {
-    //Ive set the view to show the polytechnic
-    const map = L.map(mapContainer).setView([-45.865963211874174, 170.5189969281258], 13);
- 
-    // Adding OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
+
+  onMount(async () => {
+    if (typeof window === 'undefined') return; // Skip SSR
+
+    // Dynamically import ArcGIS modules
+    const MapView = (await import("@arcgis/core/views/MapView")).default;
+    const Graphic = (await import("@arcgis/core/Graphic")).default;
+    const GraphicsLayer = (await import("@arcgis/core/layers/GraphicsLayer")).default;
+    const Point = (await import("@arcgis/core/geometry/Point")).default;
+    const WMTSLayer = (await import("@arcgis/core/layers/WMTSLayer")).default;
+    const Home = (await import("@arcgis/core/widgets/Home")).default;
+    await import("@arcgis/core/assets/esri/themes/light/main.css");
+
+    const graphicsLayer = new GraphicsLayer();
+
+    const wmtsLayer = new WMTSLayer({
+      url: "https://data.linz.govt.nz/services;key=846b31609e5947cfb627eb8135b8e9a3/wmts/1.0.0/layer/50767/WMTSCapabilities.xml",
+      subdomains: ["a", "b", "c", "d"],
+    });
  
     // Add a marker which pops up when u click on the marker
     L.marker([-45.865963211874174, 170.5189969281258]).addTo(map)
