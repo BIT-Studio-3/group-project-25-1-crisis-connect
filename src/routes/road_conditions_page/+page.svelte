@@ -28,10 +28,19 @@
       subdomains: ["a", "b", "c", "d"],
     });
  
-    // Add a marker which pops up when u click on the marker
-    L.marker([-45.865963211874174, 170.5189969281258]).addTo(map)
-      .bindPopup("You are here :)")
-      .openPopup();
+    const view = new MapView({
+      container: mapContainer,
+      map: {
+        basemap: "streets-vector",
+        layers: [wmtsLayer, graphicsLayer],
+      },
+      zoom: 13,
+      center: [170.51952093430864, -45.86587714349185],
+    });
+
+    const homeWidget = new Home({ view });
+    view.ui.add(homeWidget, "top-left");
+
   });
 </script>
 
