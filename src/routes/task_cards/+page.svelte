@@ -5,34 +5,55 @@
     let postDate = '';
     let location = '';
     let skill = '';
-    let showAddCard = false;
+    let displayForm = false;
+    let displayCard = false;
 
     let cards = [];
-    
-    function addCard() {
-    console.log("New Card");
-    showAddCard = true;
+
+    function showForm() {
+      displayForm = true;
+     }
+
+    function showCard() {
+      displayCard = true;
+    }
+     
+     function submit() {
+      
+      // Save card object
+      cards.push({
+        title,
+        postDate,
+        location,
+        skill
+      });
      }
 </script>
 
 <section>
 
     <h2>Task Allocation</h2><br>
-
     <h3>Recent Activity: </h3>
 
+<div class="cardgrid">
+  <Card /><Card />
+  <Card /><Card />
+</div>
+
+
+
 <div class="container">
-    <form on:submit|preventDefault={addCard}>
+    <form on:submit|preventDefault={showForm}>
         <button class="button1" type="submit">
             <img src="/Images/Add_icon.png" alt="Hazard sign" class="hazard_icon" width="32" />
         </button>
     </form>    
-    <h3>Add New Card<h3>
+    <h4>Add New Card<h4>
 </div><br>
 
-{#if showAddCard}
+{#if displayForm}
     <div class="container">
-        <form on:submit|preventDefault={addCard}>
+        <form on:submit|preventDefault={showForm}>
             <table class="table" style width="100%">                      
                 <label for="title">Title: </label>
                 <input type="text" id="title" required bind:value={title} />
@@ -46,9 +67,17 @@
                 <label for="skill">Requirements: </label> <!--Field does not need to be filled to submit-->
                 <input type="text" id="requirements" required bind:value={skill} />               
             </table>
+            <div>
+              <button class="button1" on:submit={displayCard}><em>Submit</em></button>
+            </div>
         </form>
+        <h4>Preview</h4>
+        <Card />
     </div>
 {/if}
+
+
+
 
 </section>
 
@@ -61,8 +90,15 @@
     text-shadow: 2px 2px 2px #000;
   }
     h3 {
-        font-size: px;
-        font-weight: bold;
+        font-size: 30px;
+        font-weight:400;
+        border: #000;
+        font-family: Serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    }
+    h4 {
+        font-size: 20px;
+        font-weight:lighter;
+        font-style: italic;
     }
 
     .container {
@@ -107,5 +143,19 @@
     table-layout: auto;
     width:fit-content;
     height: 300px;
+  }
+
+  .button2 {
+    background-color: #d49c02;
+    size: 5px;
+    width: 5rem;
+    height: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+  }
+  
+  .cardgrid {
+    display: grid;
   }
 </style>
