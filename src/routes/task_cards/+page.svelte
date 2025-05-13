@@ -1,15 +1,14 @@
 <script>
-    import Cards from '$lib/Cards.svelte';
+    import Card from '$lib/Cards.svelte';
+
     let title = '';
-    let titles = [];
     let postDate = '';
-    let postDates = [];
     let location = '';
-    let locations = [];
     let skill = '';
-    let skills = [];
     let showAddCard = false;
 
+    let cards = [];
+    
     function addCard() {
     console.log("New Card");
     showAddCard = true;
@@ -21,8 +20,6 @@
     <h2>Task Allocation</h2><br>
 
     <h3>Recent Activity: </h3>
-
-<Cards />
 
 <div class="container">
     <form on:submit|preventDefault={addCard}>
@@ -79,18 +76,6 @@
         text-align: center;
   }
 
-    .container2 {
-        display: flex;
-        border-radius: 5px;
-        background-color: rgb(52, 131, 200, 0.5);
-        align-items:flex-start;
-        align-content: flex-start;
-        gap: 5rem;
-        flex-wrap: no-wrap;
-        padding: 1rem;
-        justify-content: left;
-        text-align: left;
-  }
   form {
     display: grid;
     gap: 20px;
