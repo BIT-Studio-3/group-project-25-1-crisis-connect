@@ -1,27 +1,14 @@
 <script>
-    
+    export let title = "Title";
+    export let postDate = "";
+    export let location = "";
 </script>
 
 <div class="cardcontainer">
     <ul>
-        <h3>Title</h3>
-        <p>Date: 34/19/01</p>
-        <p>Name: Jimmy</p>    
-    </ul>
-    <ul>
-        <h3>Title</h3>
-        <p>Date: 34/19/01</p>
-        <p>Name: Jimmy</p>    
-    </ul>
-    <ul>
-        <h3>Title</h3>
-        <p>Date: 34/19/01</p>
-        <p>Name: Jimmy</p>    
-    </ul>
-    <ul>
-        <h3>Title</h3>
-        <p>Date: 34/19/01</p>
-        <p>Name: Jimmy</p>    
+        <h3>{title}</h3>
+        <p>Date: {postDate}</p>
+        <p>Location: {location}</p>    
     </ul>
 </div>
 
