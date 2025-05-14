@@ -19,14 +19,15 @@
     }
      
      function submit() {
-      
-      // Save card object
-      cards.push({
-        title,
-        postDate,
-        location,
-        skill
-      });
+        cards = [...cards, {title, postDate, location, skill }];
+        clearForm();
+     }
+
+     function clearForm(){
+      let title = '';
+      let postDate = '';
+      let location = '';
+      let skill = '';
      }
 </script>
 
@@ -35,12 +36,11 @@
     <h2>Task Allocation</h2><br>
     <h3>Recent Activity: </h3>
 
-<div class="cardgrid">
-  <Card /><Card />
-  <Card /><Card />
+<div class="container2">
+    {#each cards as card}
+        <Card title={card.title} postDate={card.postDate} location={card.location} />       
+    {/each}
 </div>
-
-
 
 <div class="container">
     <form on:submit|preventDefault={showForm}>
@@ -53,8 +53,8 @@
 
 {#if displayForm}
     <div class="container">
-        <form on:submit|preventDefault={showForm}>
-            <table class="table" style width="100%">                      
+        <form on:submit|preventDefault={submit}>
+             <div class="table">                  
                 <label for="title">Title: </label>
                 <input type="text" id="title" required bind:value={title} />
                                     
@@ -66,18 +66,16 @@
                 
                 <label for="skill">Requirements: </label> <!--Field does not need to be filled to submit-->
                 <input type="text" id="requirements" required bind:value={skill} />               
-            </table>
-            <div>
-              <button class="button1" on:submit={displayCard}><em>Submit</em></button>
-            </div>
+             </div>
+        
+          <h4>Preview</h4>
+         <Card title={title} postDate={postDate} location={location}/>
+          <div>
+                <button class="button2" type="submit">Submit</button>
+          </div>
         </form>
-        <h4>Preview</h4>
-        <Card />
     </div>
 {/if}
-
-
-
 
 </section>
 
@@ -155,7 +153,14 @@
     border-radius: 10px;
   }
   
-  .cardgrid {
+  .container2 {
     display: grid;
+    grid-template-columns: repeat(2, 325px);
+    grid-template-rows: auto;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    margin-right: 1em;
   }
 </style>

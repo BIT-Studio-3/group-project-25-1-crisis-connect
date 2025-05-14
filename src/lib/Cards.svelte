@@ -16,12 +16,12 @@
 
 .cardcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 325px);
+    grid-template-columns: repeat(1, 325px);
     grid-template-rows: auto;
     gap: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 2em;
+    margin-left: 1em;
     margin-right: 1em;
 }
  
