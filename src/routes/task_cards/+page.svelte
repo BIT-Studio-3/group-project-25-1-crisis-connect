@@ -70,7 +70,7 @@
                 <input type="text" id="requirements" bind:value={requirements} />
                 
                 <label for="urgency">Urgency 1-5: </label>
-                <input type="integer" id="urgency" required bind:value={urgency} />   
+                <input type="number" id="urgency" required bind:value={urgency} />   
              </div>       
           <h4>Preview</h4>
          <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency}/>
