@@ -63,7 +63,7 @@
         <select class="container" onchange="if(this.value) window.location.href=this.value">
           <option value="/weather_reports_page">Weather Reports</option>
           <option value="/seismic_reports_page">Seismic Activity</option>
-          <!-- <option value="/road_conditions_page">Road Conditions</option> -->
+          <option value="/road_conditions_page">Road Conditions</option>
           <option value="/volcanic_activity_page">Volcanic Activity</option>
           <option value="/fire_and_emergency_page">Fire and Emergency Reports</option>
           <option value="/rss">RSS Feed</option>
