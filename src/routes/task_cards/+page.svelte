@@ -4,7 +4,8 @@
     let title = '';
     let postDate = '';
     let location = '';
-    let skill = '';
+    let requirements = '';
+    let urgency = '';
     let displayForm = false;
     let displayCard = false;
 
@@ -19,15 +20,16 @@
     }
      
      function submit() {
-        cards = [...cards, {title, postDate, location, skill }];
+        cards = [...cards, {title, postDate, location, requirements, urgency }];
         clearForm();
      }
 
      function clearForm(){
-      let title = '';
-      let postDate = '';
-      let location = '';
-      let skill = '';
+       title = '';
+       postDate = '';
+       location = '';
+       requirements = '';
+       urgency = '';
      }
 </script>
 
@@ -38,7 +40,7 @@
 
 <div class="container2">
     {#each cards as card}
-        <Card title={card.title} postDate={card.postDate} location={card.location} />       
+        <Card title={card.title} postDate={card.postDate} location={card.location} requirements={card.requirements} urgency={card.urgency}  />       
     {/each}
 </div>
 
@@ -64,12 +66,14 @@
                 <label for="location">Location: </label>
                 <input type="address" id="location" required bind:value={location} />                
                 
-                <label for="skill">Requirements: </label> <!--Field does not need to be filled to submit-->
-                <input type="text" id="requirements" required bind:value={skill} />               
-             </div>
-        
+                <label for="requirements">Requirements: </label> <!--Field does not need to be filled to submit-->
+                <input type="text" id="requirements" bind:value={requirements} />
+                
+                <label for="urgency">Urgency 1-5: </label>
+                <input type="integer" id="urgency" required bind:value={urgency} />   
+             </div>       
           <h4>Preview</h4>
-         <Card title={title} postDate={postDate} location={location}/>
+         <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency}/>
           <div>
                 <button class="button2" type="submit">Submit</button>
           </div>
@@ -100,7 +104,7 @@
     }
 
     .container {
-        border-radius: 5px;
+        border-radius: 1px;
         background-color: rgb(52, 131, 200, 0.5);
         display: flex;
         align-items:flex-start;
@@ -114,11 +118,6 @@
     display: grid;
     gap: 20px;
     border: 2px;
-  }
-  .form-group {
-    display: grid;
-    grid-template-columns: 5fr 5fr;
-    align-items: center;
   }
 
   label {
