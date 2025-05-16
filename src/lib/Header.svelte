@@ -102,7 +102,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#b1d4e0;
+    background-color:#678994;
     padding: 0.5em;
     flex-direction:row-reverse;
     border: 2px solid #2e8bc0  ;
@@ -163,8 +163,5 @@
     li {
       border-color: antiquewhite;
     }
-    .border{
-      border-width: 5px;
-      border-color: antiquewhite;
-    }
+    
   </style>
