@@ -6,12 +6,15 @@
     let names = [];
     let role = '';
     let roles = [];
+    let workPhone= '';
+    let workPhones =[];
     
     function addDetails(event){
         event.preventDefault();
         
             if (region.trim()){
             regions = [...regions, region];
+            region= '';
         }
             if (name.trim()){
             names = [...names, name];
@@ -21,57 +24,71 @@
             roles = [...roles, role];
             role = '';
         }
+
+        if (workPhone.trim()) {
+           workPhones = [...workPhones, workPhone];
+           workPhone = '';
+        }
+
     }
 </script>
 
 <section>
-<div class="box">
-    <h1>Emergency Services</h1><br>
+
+        <h2>Emergency Services</h2>
+    
+    <!--
     <h3>Verify your account to become a listee and see "Hidden" contact info</h3>
     <div class="box2">
         <h4>Click here to register</h4>
     </div>
 
-    <!--
     <div class="box3">
         <a href="/C:/Users/ayys/Desktop/project-24-2-JayDos89.pdf" download="my_document.pdf">Download PDF</a>
 </div>
--->
-    <div class="box2">
-        <h4>Download an offline safe copy</h4> 
-
-    </div>
+<div class="box2">
+    <h4>Download an offline safe copy</h4> 
     
 </div>
-    <br>
+<p>Enter details below :</p>
+<div  class ="container">
+    
 
-    <p>Enter details below</p><br>
-    <form on:submit={addDetails}>
-        
+<form on:submit={addDetails}>
+    <div class="form-group">
         <label for="type">Region:</label>
-
         <select bind:value={region} id="region">   
             <option value="otago">Otago</option>
             <option value="canterbury">Canterbury</option>
             <option value="southland">Southland</option>
         </select><br>
-        <div class = "container2">
+    </div>
+    
+    <div class="form-group">
         <label for="name">Name
             <input type="text" bind:value={name} id="name">
         </label><br>
     </div>
-    <div class = "container2">
+    
+    <div class="form-group">
+        
+    <label for="role">Role
+        <input type="text" bind:value={role} id="role">
+    </label>
+</div>
 
-        <label for="role">Role
-            <input type="text" bind:value={role} id="role">
-        </label>
-    </div>
-    <div class = "container2">
+<div class="form-group">
+    <label for="workPhone">Work Phone
+        <input type="text" bind:value={workPhone} id="workPhone">
+    </label>
+</div>
 
-        <button type="submit">Save</button>
-    </div>
+<button type="submit">Save</button>
 
-    </form>
+
+</form>
+</div>
+
 
 <div class="container">
     <h2>The Police</h2><br>
@@ -89,6 +106,8 @@
         
     </ul><br>
 </div>
+
+-->
 
 <div class="container">
     <h2>Fire and Emergency</h2><br>
@@ -192,53 +211,27 @@
     </ul>
 </div>
 </section>
-<style>
-    .container{
-        background: rgb(0, 0, 0);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        border: 2px solid #2E8BC0;
-        margin: 10px;
-        float: left;
-    }
-    .box{
-        padding: 15px;
-        margin: 15px;
-        color:#0c2d48;
-    }
-    select{
-        color:#0c2d48;
-    }
-    .box2{
-        border: 2px solid #0C2D48;
-        border-radius: 8px;
-        padding: 5px;
-        width: 80px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 5px;
-    }/*
-    .box3{
-        border: 2px solid #0084ff;
-        border-radius: 8px;
-        padding: 5px;
-        width: 80px;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 5px;
-    }*/
-    section{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    input{
-        color: #0c2d48;
-    }
-    .container2{
-        padding-bottom: 1em;
-    }
 
+<style>
+   
+  .container2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: no-wrap;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+    form {
+    display: grid;
+    gap: 20px;
+    border: 2px;
+  }
+  .form-group {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    align-items: center;
+  }
 </style>
