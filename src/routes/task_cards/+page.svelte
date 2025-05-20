@@ -69,12 +69,19 @@
                 <label for="requirements">Requirements: </label> <!--Field does not need to be filled to submit-->
                 <input type="text" id="requirements" bind:value={requirements} />
                 
-                <label for="urgency">Urgency 1-5: </label>
-                <input type="number" id="urgency" required bind:value={urgency} />   
+                <label for="urgency">Urgency</label>             
+                <select required bind:value={urgency}>                              
+                  <option value="Low">Low</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Important">Important</option>
+                  <option value="High">High</option>
+                  <option value="Critical">Critical</option>
+                </select> 
+                
              </div>       
-          <h4>Preview</h4>
-         <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency}/>
-          <div>
+                <h4>Preview</h4>
+                  <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency}/>
+              <div>
                 <button class="button2" type="submit">Submit</button>
           </div>
         </form>
@@ -102,7 +109,6 @@
         font-weight:lighter;
         font-style: italic;
     }
-
     .container {
         border-radius: 1px;
         background-color: rgb(52, 131, 200, 0.5);
@@ -113,24 +119,20 @@
         justify-content: left;        
         text-align: center;
   }
-
   form {
     display: grid;
     gap: 20px;
     border: 2px;
   }
-
   label {
     color: #ffffff;
   }
-
   input {
     color: #000;
     border-radius: 5px;
     padding: 1;
     
   }
-
   .table {
     display: flex;
     flex-direction: column;
@@ -141,7 +143,6 @@
     width:fit-content;
     height: 300px;
   }
-
   .button2 {
     background-color: #d49c02;
     size: 5px;
@@ -161,5 +162,23 @@
     margin-bottom: 1em;
     margin-left: 2em;
     margin-right: 1em;
+  }
+
+  select {
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border: 3px solid;
+  }
+  input {
+    font-size: small;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    border: 3px solid;
+  }
+  .form-group {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    align-items: center;
   }
 </style>
