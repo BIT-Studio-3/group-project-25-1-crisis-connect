@@ -6,6 +6,7 @@
     let location = '';
     let requirements = '';
     let urgency = '';
+    let status = '';
     let displayForm = false;
     let displayCard = false;
 
@@ -20,7 +21,7 @@
     }
      
      function submit() {
-        cards = [...cards, {title, postDate, location, requirements, urgency }];
+        cards = [...cards, {title, postDate, location, requirements, urgency, status}];
         clearForm();
      }
 
@@ -30,6 +31,7 @@
        location = '';
        requirements = '';
        urgency = '';
+       status = '';
      }
 </script>
 
@@ -40,7 +42,7 @@
 
 <div class="container2">
     {#each cards as card}
-        <Card title={card.title} postDate={card.postDate} location={card.location} requirements={card.requirements} urgency={card.urgency}  />       
+        <Card title={card.title} postDate={card.postDate} location={card.location} requirements={card.requirements} urgency={card.urgency} status={card.status}  />       
     {/each}
 </div>
 
@@ -57,30 +59,36 @@
     <div class="container">
         <form on:submit|preventDefault={submit}>
              <div class="table">                  
-                <label for="title">Title: </label>
+                <label for="title">Title</label>
                 <input type="text" id="title" required bind:value={title} />
                                     
-                <label for="date">Date: </label>
+                <label for="date">Date</label>
                 <input type="date" id="date" required bind:value={postDate} />                
                 
-                <label for="location">Location: </label>
+                <label for="location">Location</label>
                 <input type="address" id="location" required bind:value={location} />                
                 
-                <label for="requirements">Requirements: </label> <!--Field does not need to be filled to submit-->
+                <label for="requirements">Requirements (optional)</label> <!--Field does not need to be filled to submit-->
                 <input type="text" id="requirements" bind:value={requirements} />
                 
                 <label for="urgency">Urgency</label>             
                 <select required bind:value={urgency}>                              
                   <option value="Low">Low</option>
-                  <option value="Normal">Normal</option>
-                  <option value="Important">Important</option>
+                  <option value="Moderate">Moderate</option>
                   <option value="High">High</option>
                   <option value="Critical">Critical</option>
                 </select> 
                 
+                <label for="status">Status</label>
+                <select required bind:value={status}>
+                  <option value="Not Assigned">Not Assigned</option>
+                  <option value="Task Allocated">Task Alocated</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Task Completed">Task Completed</option>
+                </select>
              </div>       
                 <h4>Preview</h4>
-                  <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency}/>
+                  <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency} status={status}/>
               <div>
                 <button class="button2" type="submit">Submit</button>
           </div>
