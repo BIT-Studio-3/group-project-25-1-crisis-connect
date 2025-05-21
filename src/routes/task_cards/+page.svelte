@@ -56,7 +56,8 @@
 </div><br>
 
 {#if displayForm}
-    <div class="container">
+  <div class="display_form_container">
+    <div class="form_box">
         <form on:submit|preventDefault={submit}>
              <div class="table">                  
                 <label for="title">Title</label>
@@ -86,14 +87,22 @@
                   <option value="In Progress">In Progress</option>
                   <option value="Task Completed">Task Completed</option>
                 </select>
-             </div>       
-                <h4>Preview</h4>
-                  <Card title={title} postDate={postDate} location={location} requirements={requirements} urgency={urgency} status={status}/>
+             </div>  
+                <div class="preview">   
+                  <h4>Preview</h4>
+                    <Card title={title} 
+                    postDate={postDate} 
+                    location={location} 
+                    requirements={requirements} 
+                    urgency={urgency} 
+                    status={status}/>
+                </div>  
               <div>
                 <button class="button2" type="submit">Submit</button>
           </div>
         </form>
     </div>
+  </div>
 {/if}
 
 </section>
@@ -127,10 +136,31 @@
         justify-content: left;        
         text-align: center;
   }
+  .preview {
+    display: flex;
+    max-width: 350;
+    align-items: center;
+    justify-content: flex-end;
+  }
   form {
     display: grid;
     gap: 20px;
     border: 2px;
+
+  }
+  .form_box {
+    display: flex;
+    max-width: 400;
+  }
+  .display_form_container{
+    display: grid;
+    grid-template-columns: repeat(1, 350px);
+    grid-template-rows: auto;
+    gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   label {
     color: #ffffff;
@@ -183,10 +213,5 @@
     background-color: aliceblue;
     color: rgb(0, 0, 0);
     border: 3px solid;
-  }
-  .form-group {
-    display: grid;
-    grid-template-columns: 5fr 5fr;
-    align-items: center;
   }
 </style>
