@@ -4,6 +4,7 @@
     export let location = "";
     export let requirements = "";
     export let urgency = "";
+    export let status = "";
 </script>
 
 <div class="cardcontainer">
@@ -12,7 +13,8 @@
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>
-        <p>Urgency: {urgency}</p>   
+        <p>Urgency: {urgency}</p>
+        <p>Status: {status}</p>   
     </ul>
 </div>
 
