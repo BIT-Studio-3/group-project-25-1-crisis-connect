@@ -61,31 +61,13 @@
 
   img { /* image float right side */
     width: 80px;
-    height: auto;
-  
-    text-align: center;
-  }
-  /* Sidebar styles */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: auto;
-    min-height: 100%;
-    overflow-y: auto;
-    width: 20rem; /* w-64 */
-    background-color: #74a7d5; /* Darker base color */
-    background: linear-gradient(to right, #73a5f7, #5e6c84); /* blue → purple → pink */
-    color: rgb(118, 5, 5);
-    padding-left: 0rem;
-    border-radius: 0px;
-    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-  }
-
-  /* Sidebar button */
-  .sidebar-button {
-    transition: transform 0.3s ease-in-out;
+  a {
+    display: block;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
   }
 
   .main-content {
