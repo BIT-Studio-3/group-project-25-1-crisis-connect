@@ -61,6 +61,11 @@
 
   img { /* image float right side */
     width: 80px;
+
+  li {
+    margin: 0.5rem 0;
+  }
+
   a {
     display: block;
     padding: 0.5rem;
