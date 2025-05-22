@@ -1,4 +1,5 @@
 
+<di class="layout">
   <aside class="sidebar">
     <img src="/Images/logo.png" alt="Crisis Connect logo" class="logo"/>
 
@@ -26,6 +27,11 @@
       <li><a href="/task_cards">Task Cards</a></li>
     </ul>
   </aside>
+
+  <main class="main-content">
+    <slot />
+  </main>
+</di>
 
 <style>
   h2{
