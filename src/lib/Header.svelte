@@ -59,6 +59,19 @@
     margin-bottom: 0.5rem;
   }
 
+  .dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+  }
+  .dropdown option:checked {
+  background-color: #e0e0e0;
+  color: #333;
+}
 
   ul {
     list-style: none;
