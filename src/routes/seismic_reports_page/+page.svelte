@@ -2,165 +2,21 @@
 <script>
     // exporting quake data
     export let data;
+    import QuakeList from '$lib/QuakeList.svelte';
 </script>
 
 <section>
 <!-- Page title -->
 <h1>Quakes</h1>
-<div class="container">
-    <details close>
-        <summary><h2>MMI 5 Quakes</h2></summary>
-        {#each data.quakes.features.slice(0,5) as thing}
-            <div>
-                <h3>{thing.properties.locality}</h3>
-                <h3>Coordinates (y, x):</h3>
-                <p>{thing.geometry.coordinates}</p>
-                <h3>Depth:</h3>
-                <p>{thing.properties.depth.toFixed(3)} KM</p>
-                <h3>Time:</h3>
-                <p>
-                    Date: {thing.properties.time
-                        .replace(/[T]/g, " Time: ")
-                        .replace(/[Z]/g, " ")}
-                </p>
-            </div>
-        {/each}
-    </details>
-</div>
-<div class="container">
-    <details close>
-        <summary><h2>MMI 6 Quakes</h2></summary>
-        {#each data.quakes2.features.slice(0,5) as thing}
-            <div>
-                <h3>{thing.properties.locality}</h3>
-                <h3>Coordinates (y, x):</h3>
-                <p>{thing.geometry.coordinates}</p>
-                <h3>Depth:</h3>
-                <p>{thing.properties.depth.toFixed(3)} KM</p>
-                <h3>Time:</h3>
-                <p>
-                    {thing.properties.time
-                        .replace(/[TZ]/g, " ")
-                        .replace(/[Z]/g, " ")}
-                </p>
-            </div>
-        {/each}
-    </details>
-</div>
-<div class="container">
-    <details open>
-        <summary><h2>MMI 7 Quakes</h2></summary>
-        {#each data.quakes3.features.slice(0,5) as thing}
-            <div>
-                <h3>{thing.properties.locality}</h3>
-                <h3>Coordinates (y, x):</h3>
-                <p>{thing.geometry.coordinates}</p>
-                <h3>Depth:</h3>
-                <p>{thing.properties.depth.toFixed(3)} KM</p>
-                <h3>Time:</h3>
-                <p>
-                    {thing.properties.time
-                        .replace(/[TZ]/g, " ")
-                        .replace(/[Z]/g, " ")}
-                </p>
-            </div>
-        {/each}
-    </details>
-</div>
-<div class="container">
-    <details open>
-        <summary><h2>MMI 8 Quakes</h2></summary>
-        {#each data.quakes4.features.slice(0,5) as thing}
-            <div>
-                <h3>{thing.properties.locality}</h3>
-                <h3>Coordinates (y, x):</h3>
-                <p>{thing.geometry.coordinates}</p>
-                <h3>Depth:</h3>
-                <p>{thing.properties.depth.toFixed(3)} KM</p>
-                <h3>Time:</h3>
-                <p>
-                    {thing.properties.time
-                        .replace(/[TZ]/g, " ")
-                        .replace(/[Z]/g, " ")}
-                </p>
-            </div>
-        {/each}
-    </details>
-</div>
+<QuakeList title="MMI 5 Quakes" quakes={data.quakes} />
+<QuakeList title="MMI 6 Quakes" quakes={data.quakes2} />
+<QuakeList title="MMI 7 Quakes" quakes={data.quakes3} />
+<QuakeList title="MMI 8 Quakes" quakes={data.quakes4}/>
 </section>
 <style>
-    div {
-        border: 2px solid black;
-        margin: 0.6em;
-        display: inline-block;
-    }
     h1{
         font-size: 2.5em;
         color: #333;
     }
-    h2 {
-        color: antiquewhite;
-    }
-    h3 {
-        padding-left: 0.3em;
-    }
-
-    p {
-        padding-top: 0.1em;
-        padding-left: 0.8em;
-    }
-
-    details {
-        padding: 0.5em;
-        border-radius: 0.5em;
-        padding-left: 10px;
-    }
-
-    summary {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        list-style-position: outside;
-        margin-left: 10px;
-        padding: 10px 10px 10px 20px;
-        border-radius: 5px;
-    }
-
-    .container{
-        padding:1em;
-        border: none;
-    }
-    @media (max-width: 768px) {
-    section {
-        padding: 10px;
-    }
-
-    .container {
-        padding: 0.5em;
-    }
-
-    div {
-        display: block;
-        width: 100%;
-        max-width: 90%;
-        margin: 10px auto;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    summary {
-        font-size: 1.2em;
-        padding: 10px;
-    }
-
-    h3, p {
-        font-size: 1em;
-        padding-left: 5px;
-    }
-
-    details {
-        padding: 10px;
-    }
-}
-
 </style>
 
