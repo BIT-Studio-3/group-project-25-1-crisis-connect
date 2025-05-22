@@ -62,6 +62,12 @@
   img { /* image float right side */
     width: 80px;
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
   li {
     margin: 0.5rem 0;
   }
