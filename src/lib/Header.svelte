@@ -1,18 +1,31 @@
 
+  <aside class="sidebar">
+    <img src="/Images/logo.png" alt="Crisis Connect logo" class="logo"/>
+
+    <h2>Live Data</h2>
+    <select class="dropdown" on:change={(e) => window.location.href = e.target.value}>
+      <option value="" disabled selected>Select Live Data</option>
+      <option value="/weather_reports_page">Weather Reports</option>
+      <option value="/seismic_reports_page">Seismic Activity</option>
+      <option value="/road_conditions_page">Road Conditions</option>
+      <option value="/volcanic_activity_page">Volcanic Activity</option>
+      <option value="/rss">RSS Feed</option>
+    </select>
+    
+
+    <h2>Reports</h2>
+    <ul>
+      <li><a href="/hazards">Hazard Form</a></li>
+      <li><a href="/damage_form">Damage Form</a></li>
+      <li><a href="/alert_system">Post an Alert</a></li>
     </ul>
 
-    <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
-    <ul class="space-y-2">
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/contact_page" on:click={() => isSidebarOpen = false}>Contact Services</a></li>
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/task_cards" on:click={() => isSidebarOpen = false}>Task Cards</a></li>
-      <!-- <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/developer_contact" >Contact us "the developers"</a></li> -->
-
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="/contact_page">Contact Services</a></li>
+      <li><a href="/task_cards">Task Cards</a></li>
     </ul>
-  </div>
-  {/if}
-</div>
-  
-</section>
+  </aside>
 
 <style>
   h2{
