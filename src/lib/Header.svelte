@@ -34,33 +34,31 @@
 </di>
 
 <style>
-  h2{
-    font-size: 30px;
-  }
-  select{
-    color: black;
-  }
-
-  section
-  {
+  .layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:#678994;
-    padding: 0.5em;
-    flex-direction:row-reverse;
-    border: 2px solid #2e8bc0  ;
-  }@media only screen and (max-width: 400px) {
-    section {
-      flex-direction:row-reverse;
-      justify-content: space-between;
-      align-items : center;
-      padding: 0.2 em;
-    }
+    height: 100vh;
+    overflow: hidden;
   }
 
-  img { /* image float right side */
+  .sidebar {
+    width: 300px;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
+
+  .logo {
     width: 80px;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
 
   ul {
     list-style: none;
