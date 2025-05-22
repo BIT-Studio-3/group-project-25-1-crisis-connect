@@ -5,13 +5,18 @@
   </script>
   
   <div class="layout-container">
+  <div class="center">
+    <div class="left">
     <Header />
+    </div>
   
-    <main class="content">
+    <div class="right">
+      <main class="main-content">
       <slot />
     </main>
-  
     <Footer />
+    </div>
+  </div>
   </div>
   
   <style>
