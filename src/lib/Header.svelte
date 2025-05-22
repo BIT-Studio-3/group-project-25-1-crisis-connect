@@ -88,8 +88,10 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  .sidebar-button.open {
-    transform: rotate(180deg);
+  .main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
   }
 
   @media (max-width: 768px) {
