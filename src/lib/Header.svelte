@@ -91,21 +91,13 @@
   .sidebar-button.open {
     transform: rotate(180deg);
   }
-  .container {
-        padding-left: 20px;
-        padding-right: 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height:  40px;
-        color: #2e8bc0;
-      
+
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: column;
     }
-    ul {
-      background-color: transparent;
+    .sidebar {
+      width: 100%;
+      height: auto;
     }
-    li {
-      border-color: antiquewhite;
-    }
-    
-  </style>
+  }
