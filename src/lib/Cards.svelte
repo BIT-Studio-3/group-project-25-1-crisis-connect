@@ -10,8 +10,8 @@
 
 <div class="cardcontainer">
     <ul>
-        <p>Id: {id}</p>
         <h3>{title}</h3>
+        <p>Id: {id}</p>
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>

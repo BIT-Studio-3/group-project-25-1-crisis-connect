@@ -43,7 +43,7 @@
 
 <div class="container2">
     {#each cards as card}
-        <Card id={card.id} title={card.title} postDate={card.postDate} location={card.location} requirements={card.requirements} urgency={card.urgency} status={card.status}  />       
+        <Card title={card.title} id={card.id} postDate={card.postDate} location={card.location} requirements={card.requirements} urgency={card.urgency} status={card.status}  />       
     {/each}
 </div>
 
@@ -60,12 +60,12 @@
   <div class="display_form_container">
     <div class="form_box">
         <form on:submit|preventDefault={submit}>
-             <div class="table">    
-                <label for="id">Id</label>
-                <input type="number" id="id" required bind:value={id} />
-              
+             <div class="table">                           
                 <label for="title">Title</label>
                 <input type="text" id="title" required bind:value={title} />
+
+                <label for="id">Id</label>
+                <input type="number" id="id" required bind:value={id} />
                                     
                 <label for="date">Date</label>
                 <input type="date" id="date" required bind:value={postDate} />                
