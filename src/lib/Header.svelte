@@ -136,6 +136,9 @@
   li {
     margin: 0.5rem 0;
   }
+  .hidden {
+    display: none;
+  }
 
   a {
     display: block;
