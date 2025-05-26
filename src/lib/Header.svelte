@@ -176,8 +176,19 @@
     }
 
     .sidebar {
-      width: 100%;
-      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      transform: translateX(-100%);
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
     }
   }
 </style>
