@@ -19,21 +19,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         background: transparent;
         color: #fff; 
-        padding: 20px;
-        font-size: 14px;
+  padding: 20px 15px;
+  font-size: 13px;
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
-        margin-top: 40px;
-    }
-
-    footer p {
+  margin-top: 0px; /* reduced margin */
         text-align: center;
-        margin: 5px 0;
     }
  
-    footer p:last-child {
+footer .contact-info p {
+  margin: 2px 0;
         font-size: 12px;
     }
  
