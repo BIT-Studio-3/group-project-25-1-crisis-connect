@@ -169,10 +169,12 @@
     z-index: 1100;
   }
 
+  /* Mobile styles */
   @media (max-width: 768px) {
     .layout {
-      flex-direction: column;
+      flex-direction: row;
     }
+
     .sidebar {
       width: 100%;
       height: auto;
