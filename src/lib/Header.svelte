@@ -41,9 +41,16 @@
   });
 </script>
 
-<di class="layout">
-  <aside class="sidebar">
-    <img src="/Images/logo.png" alt="Crisis Connect logo" class="logo"/>
+<div class="layout">
+  <button 
+  class="hamburger"
+  class:hidden={sidebarOpen}
+  aria-label="Toggle menu"
+    on:click={toggleSidebar}
+    bind:this={hamburger}
+  >
+    ☰
+  </button>
 
     <h2>Live Data</h2>
     <select class="dropdown" on:change={(e) => window.location.href = e.target.value}>
