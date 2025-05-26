@@ -1,3 +1,14 @@
+  import { onMount } from 'svelte';
+
+  let sidebarOpen = false;
+
+  let sidebar;
+  let hamburger;
+
+  function toggleSidebar() {
+    sidebarOpen = !sidebarOpen;
+  }
+
 
 <di class="layout">
   <aside class="sidebar">
