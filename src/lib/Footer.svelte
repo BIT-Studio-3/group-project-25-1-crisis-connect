@@ -71,16 +71,18 @@
     @media (max-width: 600px) {
         footer {
             font-size: 12px;
-            padding: 15px;
+    padding: 8px 10px;
+    margin-top: 10px;
         }
  
         nav ul {
             flex-direction: column;
             align-items: center;
+    gap: 8px;
         }
  
-        nav ul li {
-            margin: 5px 0;
+  nav ul li a {
+    padding: 3px 0;
         }
     }
 </style>
