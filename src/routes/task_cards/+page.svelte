@@ -68,11 +68,8 @@
           width="32"
         />
       </button>
-    </form>
-    <h4>
-      Add New Card
-      <h4></h4>
-    </h4>
+    </form>      
+      <h4>Add New Card</h4>
   </div>
   <br />
 

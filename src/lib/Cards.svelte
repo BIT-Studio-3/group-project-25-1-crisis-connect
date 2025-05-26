@@ -8,9 +8,9 @@
     export let status = "";
 </script>
 
-<div class="cardcontainer">
+<div class="card_container">
     <ul>
-        <h3>{title}</h3>
+        <p class="card_title">{title}</p>
         <p>Id: {id}</p>
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
@@ -21,13 +21,8 @@
 </div>
 
 <style>
-h3 {
-    color: rgb(52, 131, 200, 0.5); 
-    font-size: 1.5rem;
-    text-align: center;
-    padding-top: 20px;
-}
-.cardcontainer {
+
+.card_container {
     display: grid;
     text-align: left;
     grid-template-columns: repeat(1, 350px);
@@ -39,4 +34,11 @@ h3 {
     margin-right: 1em;
 }
  
+.card_title {
+    color: rgb(52, 131, 200);
+    display: flex;
+    font-size: larger;
+    padding: 3px;
+    text-overflow: initial;
+}
 </style>
