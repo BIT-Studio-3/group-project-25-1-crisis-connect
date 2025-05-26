@@ -155,6 +155,20 @@
     overflow-y: auto;
   }
 
+  /* Hamburger button */
+  .hamburger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
   @media (max-width: 768px) {
     .layout {
       flex-direction: column;
