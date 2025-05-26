@@ -16,10 +16,6 @@
     displayForm = true;
   }
 
-  function showCard() {
-    displayCard = true;
-  }
-
   function submit() {
     cards = [
       ...cards,
@@ -79,7 +75,7 @@
         <form on:submit|preventDefault={submit}>
           <div class="table">
             <label for="title">Title</label>
-            <input type="text" id="title" required bind:value={title} />
+            <input type="text" id="title" maxlength="20" required bind:value={title} />
 
             <label for="id">Id</label>
             <input type="number" id="id" required bind:value={id} />
@@ -185,13 +181,13 @@
   }
   .preview {
     display: grid;
-    /*max-width: 300;*/
+    max-width: 300;
     align-items: center;
     justify-content: flex-end;
   }
   .form_box {
     display: flex;
-    /* max-width: 600;*/
+    max-width: 400;
   }
   label {
     color: #ffffff;
@@ -212,7 +208,7 @@
     height: 300px;
   }
   .button2 {
-    background-color: #d49c02;
+    background-color: #02d42f;
     size: 5px;
     width: 5rem;
     height: 2.5rem;

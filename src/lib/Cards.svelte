@@ -10,8 +10,8 @@
 
 <div class="card_container">
     <ul>
-        <p class="card_title">{title}</p>
-        <p>Id: {id}</p>
+        <div class="card_header"><p>Id: {id}</p></div>
+        <p class="card_title">{title}</p>       
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>
@@ -40,5 +40,12 @@
     font-size: larger;
     padding: 3px;
     text-overflow: initial;
+}
+
+.card_header {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: flex-end;
 }
 </style>
