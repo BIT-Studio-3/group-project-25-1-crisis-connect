@@ -83,7 +83,7 @@
   <main class="main-content">
     <slot />
   </main>
-</di>
+</div>
 
 <style>
   .layout {
@@ -94,10 +94,11 @@
 
   .sidebar {
     width: 300px;
-    color: #fff;
     padding: 1rem;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.192);
+    background-color: #070707b7;
     overflow-y: auto;
+    transition: transform rgba(141, 19, 19, 0)0.3s ease;
   }
 
   .logo {
