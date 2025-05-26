@@ -110,6 +110,7 @@
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    color: white;
   }
 
   .dropdown {
