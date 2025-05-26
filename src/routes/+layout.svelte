@@ -53,4 +53,8 @@
     overflow-y: auto;
   }
   @media (max-width: 768px) {
+    .center {
+      position: relative;
+    }
+
 </style>
