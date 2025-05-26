@@ -69,4 +69,10 @@
       flex: none; /* disable flex shrinking/growing */
     }
 
+    .right {
+      flex: 1;
+      margin-left: 0; /* remove margin if any */
+      padding-top: 1.5rem; /* optional, to avoid overlap under left box */
+    }
+  }
 </style>
