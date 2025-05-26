@@ -52,8 +52,11 @@
     ☰
   </button>
 
+  <aside class="sidebar" class:open={sidebarOpen} bind:this={sidebar}>
+    <img src="/Images/logo.png" alt="Crisis Connect logo" class="logo" />
+
     <h2>Live Data</h2>
-    <select class="dropdown" on:change={(e) => window.location.href = e.target.value}>
+    <select class="dropdown" on:change={onSelectChange}>
       <option value="" disabled selected>Select Live Data</option>
       <option value="/weather_reports_page">Weather Reports</option>
       <option value="/seismic_reports_page">Seismic Activity</option>
