@@ -21,6 +21,25 @@
     }
   }
 
+  function handleClickOutside(event) {
+    if (
+      sidebarOpen &&
+      sidebar &&
+      hamburger &&
+      !sidebar.contains(event.target) &&
+      !hamburger.contains(event.target)
+    ) {
+      closeSidebar();
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  });
+</script>
 
 <di class="layout">
   <aside class="sidebar">
