@@ -13,6 +13,14 @@
     sidebarOpen = false;
   }
 
+  function onSelectChange(event) {
+    const url = event.target.value;
+    if (url) {
+      window.location.href = url;
+      closeSidebar();
+    }
+  }
+
 
 <di class="layout">
   <aside class="sidebar">
