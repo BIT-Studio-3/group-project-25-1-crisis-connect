@@ -1,3 +1,4 @@
+<script>
   import { onMount } from 'svelte';
 
   let sidebarOpen = false;
@@ -64,7 +65,6 @@
       <option value="/volcanic_activity_page">Volcanic Activity</option>
       <option value="/rss">RSS Feed</option>
     </select>
-    
 
     <h2>Reports</h2>
     <ul>
@@ -125,7 +125,7 @@
   .dropdown option:checked {
   background-color: #e0e0e0;
   color: #333;
-}
+  }
 
   ul {
     list-style: none;
@@ -189,6 +189,15 @@
       transform: translateX(0);
     }
 
+    .hamburger {
+      display: block;
+    }
+    .hamburger.hidden {
+      display: none;
+    }
+
+    .main-content {
+      padding: 1rem;
     }
   }
 </style>
