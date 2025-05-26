@@ -9,6 +9,10 @@
     sidebarOpen = !sidebarOpen;
   }
 
+  function closeSidebar() {
+    sidebarOpen = false;
+  }
+
 
 <di class="layout">
   <aside class="sidebar">
