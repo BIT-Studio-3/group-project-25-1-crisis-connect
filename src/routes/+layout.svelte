@@ -52,4 +52,5 @@
     flex: 1;
     overflow-y: auto;
   }
+  @media (max-width: 768px) {
 </style>
