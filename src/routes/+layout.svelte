@@ -57,4 +57,16 @@
       position: relative;
     }
 
+    .left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      z-index: 10; /* so it stays on top */
+      flex: none; /* disable flex shrinking/growing */
+    }
+
 </style>
