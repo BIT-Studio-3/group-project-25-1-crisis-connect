@@ -37,35 +37,23 @@
         font-size: 12px;
     }
  
-    footer a {
-        color: #ffffff;
-        text-decoration: none;
-    }
- 
-    ul{
-        background-color: transparent;
-    }
-    nav {
-        display: flex;
-        flex-direction: row;
+nav {
         margin-top: 10px;
     }
  
     nav ul {
         display: flex;
         flex-direction: row;
-        list-style-type: none;
+  list-style: none;
         padding: 0;
         margin: 0;
-    }
- 
-    nav ul li {
-        margin: 0 10px;
+  gap: 15px;
+  background-color: transparent;
     }
  
     nav ul li a {
-        font-size: 16px;
-        padding: 15px;
+  font-size: 14px;
+  padding: 4px;
     }
  
     @media (max-width: 600px) {
