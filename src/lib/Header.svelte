@@ -68,15 +68,15 @@
 
     <h2>Reports</h2>
     <ul>
-      <li><a href="/hazards">Hazard Form</a></li>
-      <li><a href="/damage_form">Damage Form</a></li>
-      <li><a href="/alert_system">Post an Alert</a></li>
+      <li><a href="/hazards" class="sidebar-link" on:click={closeSidebar}>Hazard Form</a></li>
+      <li><a href="/damage_form" class="sidebar-link" on:click={closeSidebar}>Damage Form</a></li>
+      <li><a href="/alert_system" class="sidebar-link" on:click={closeSidebar}>Post an Alert</a></li>
     </ul>
 
     <h2>Contact</h2>
     <ul>
-      <li><a href="/contact_page">Contact Services</a></li>
-      <li><a href="/task_cards">Task Cards</a></li>
+      <li><a href="/contact_page" class="sidebar-link" on:click={closeSidebar}>Contact Services</a></li>
+      <li><a href="/task_cards" class="sidebar-link" on:click={closeSidebar}>Task Cards</a></li>
     </ul>
   </aside>
 
