@@ -10,8 +10,11 @@
 
 <div class="card_container">
     <ul>
-        <div class="card_header"><p>Id: {id}</p></div>
-        <p class="card_title">{title}</p>       
+        <div class="card_header">
+        
+        <p class="card_title">{title}</p>
+        <p class="id-box">Id: {id}</p>
+        </div>               
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>
@@ -44,8 +47,16 @@
 
 .card_header {
     display: flex;
-    flex-direction: row;
-    align-content: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.id-box {
+    background-color: #d49c02;
+    color: white;
+    font-weight: bold;
+    padding: 0.2em 0.6em;
+    border-radius: 5px;
+    font-size: 0.8em;
 }
 </style>
