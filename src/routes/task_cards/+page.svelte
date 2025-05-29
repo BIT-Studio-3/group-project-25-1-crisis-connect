@@ -8,8 +8,6 @@
   let urgency = "";
   let status = "";
   let displayForm = false;
-  let displayCard = false;
-
   let cards = [];
 
   function showForm() {
@@ -17,9 +15,9 @@
   }
 
   function submit() {
-    cards = [
-      ...cards,
-      { id, title, postDate, location, requirements, urgency, status },
+    const numericId = parseInt(id, 10); 
+    cards = [...cards,
+      { id: numericId, title, postDate, location, requirements, urgency, status },
     ];
     clearForm();
   }
@@ -75,25 +73,33 @@
         <form on:submit|preventDefault={submit}>
           <div class="table">
             <label for="title">Title</label>
-            <input type="text" id="title" maxlength="20" required bind:value={title} />
+            <input type="text" id="title" maxlength="16" required bind:value={title} />
 
             <label for="id">Id</label>
-            <input type="number" id="id" required bind:value={id} />
-
+            <input
+                  type="text"
+                  id="id"
+                  maxlength="3"
+                  inputmode="numeric"
+                  required
+                  bind:value={id}
+                  on:input={() => {
+                    id = id.replace(/[^\d]/g, "").slice(0, 3);
+                  }} />
             <label for="date">Date</label>
-            <input type="date" id="date" required bind:value={postDate} />
+            <input type="date" id="date" maxlength="28" required bind:value={postDate} />
 
             <label for="location">Location</label>
             <input
               type="address"
-              id="location"
+              id="location" maxlength="28"
               required
               bind:value={location}
             />
 
             <label for="requirements">Requirements (optional)</label>
             <!--Field does not need to be filled to submit-->
-            <input type="text" id="requirements" bind:value={requirements} />
+            <input type="text" id="requirements" maxlength="28" bind:value={requirements} />
 
             <label for="urgency">Urgency</label>
             <select required bind:value={urgency}>
@@ -250,4 +256,5 @@
     color: rgb(0, 0, 0);
     border: 3px solid;
   }
+  
 </style>

@@ -10,8 +10,7 @@
 
 <div class="card_container">
     <ul>
-        <div class="card_header">
-        
+        <div class="card_header">       
         <p class="card_title">{title}</p>
         <p class="id-box">Id: {id}</p>
         </div>               
