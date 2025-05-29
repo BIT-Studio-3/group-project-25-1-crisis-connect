@@ -20,6 +20,7 @@
       { id: numericId, title, postDate, location, requirements, urgency, status },
     ];
     clearForm();
+    displayForm = false;
   }
 
   function clearForm() {
@@ -151,10 +152,9 @@
   }
   h3 {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 400em;
     border: #000;
-    font-family: Serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial;
+    font-family: Serif, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
   }
   h4 {
     font-size: 20px;
@@ -188,13 +188,13 @@
   }
   .preview {
     display: grid;
-    max-width: 300;
+    max-width: 300em;
     align-items: center;
     justify-content: flex-end;
   }
   .form_box {
     display: flex;
-    max-width: 400;
+    max-width: 400em;
   }
   label {
     color: #ffffff;
