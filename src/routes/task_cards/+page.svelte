@@ -73,7 +73,7 @@
         <form on:submit|preventDefault={submit}>
           <div class="table">
             <label for="title">Title</label>
-            <input type="text" id="title" maxlength="16" required bind:value={title} />
+            <input type="text" id="title" maxlength="17" required bind:value={title} />
 
             <label for="id">Id</label>
             <input
@@ -130,8 +130,9 @@
               {status}
             />
             <div>
-              <button class="button2" type="submit" style="margin-right: 25px;">Submit</button>
-              <button class="button3" type="button" on:click={clearForm}>Clear Form !</button>
+              
+              <button class="button3" type="button" on:click={clearForm}>Reset</button>
+              <button class="button2" type="submit" style="margin-left: 50px;">Submit</button>
             </div>
           </div>
         </form>
@@ -221,16 +222,16 @@
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
+    font-size: 25px;
   }
 
   .button3 {
-    background-color: #d42102;
-    size: 5px;
-    width: 110px;
-    height: 50px;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
+    background-color: #C0C0C0;
+    size: 2.5px;
+    width: 55px;
+    height: 25px;
+    color: rgb(0, 0, 0);   
+    border-radius: 2px;
   }
 
   .container2 {
