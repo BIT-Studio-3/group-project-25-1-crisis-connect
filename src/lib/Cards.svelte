@@ -37,11 +37,12 @@
 }
  
 .card_title {
-    color: rgb(52, 131, 200);
+    color: rgb(200, 200, 52);
     display: flex;
-    font-size: larger;
-    padding: 0px;
+    font-size: 20px;
+    padding-bottom: 5px;
     text-overflow: initial;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .card_header {
@@ -51,11 +52,12 @@
 }
 
 .id-box {
-    background-color: #d49c02;
-    color: white;
+    background-color: #C0C0C0;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    padding: 0.2em 0.6em;
-    border-radius: 5px;
-    font-size: 0.8em;
+    padding: 2px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    font-size: 0.7em;
 }
 </style>
