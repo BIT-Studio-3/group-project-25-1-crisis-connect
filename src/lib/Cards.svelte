@@ -40,7 +40,7 @@
     color: rgb(52, 131, 200);
     display: flex;
     font-size: larger;
-    padding: 3px;
+    padding: 0px;
     text-overflow: initial;
 }
 

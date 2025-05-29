@@ -130,8 +130,8 @@
               {status}
             />
             <div>
-              <button class="button2" type="submit">Submit</button>
-              <button class="button3" type="submit">Clear</button>
+              <button class="button2" type="submit" style="margin-right: 25px;">Submit</button>
+              <button class="button3" type="button" on:click={clearForm}>Clear Form !</button>
             </div>
           </div>
         </form>
@@ -216,8 +216,8 @@
   .button2 {
     background-color: #02d42f;
     size: 5px;
-    width: 5rem;
-    height: 2.5rem;
+    width: 100px;
+    height: 50px;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
@@ -226,8 +226,8 @@
   .button3 {
     background-color: #d42102;
     size: 5px;
-    width: 5rem;
-    height: 2.5rem;
+    width: 110px;
+    height: 50px;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
