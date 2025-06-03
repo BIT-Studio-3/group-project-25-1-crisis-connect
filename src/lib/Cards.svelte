@@ -12,7 +12,7 @@
     <ul>
         <div class="card_header">       
         <p class="card_title">{title}</p>
-        <p class="id-box">Id: {id}</p>
+        <p class="id-box {urgency}">Id: {id}</p>
         </div>               
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
@@ -59,5 +59,22 @@
     margin-bottom: 50px;
     border-radius: 4px;
     font-size: 0.7em;
+}
+
+.Low {
+  background-color: white;
+}
+
+.Moderate {
+  background-color: yellow;
+}
+
+.High {
+  background-color: orange;
+}
+
+.Critical {
+  background-color: red;
+  color: white;
 }
 </style>
