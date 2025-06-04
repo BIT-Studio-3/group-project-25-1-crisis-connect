@@ -32,6 +32,11 @@
     urgency = "";
     status = "";
   }
+  
+  function removeCardById(targetId) {
+  cards = cards.filter(card => card.id !== targetId);
+  }
+  
 </script>
 
 <section>
@@ -49,7 +54,9 @@
         requirements={card.requirements}
         urgency={card.urgency}
         status={card.status}
+        onRemove={removeCardById}
       />
+      
     {/each}
   </div>
 

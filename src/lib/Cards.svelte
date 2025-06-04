@@ -6,6 +6,7 @@
     export let requirements = "";
     export let urgency = "";
     export let status = "";
+    export let onRemove = () => {}; // add this
 </script>
 
 <div class="card_container">
@@ -18,7 +19,8 @@
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>
         <p>Urgency: {urgency}</p>
-        <p>Status: {status}</p>   
+        <p>Status: {status}</p><br>
+        <button class="button3" on:click={() => onRemove(id)} title="Delete Card?"><h3>X</h3></button>   
     </ul>
 </div>
 
@@ -37,7 +39,7 @@
 }
  
 .card_title {
-    color: rgb(200, 200, 52);
+    color: rgb(255, 255, 255);
     display: flex;
     font-size: 20px;
     padding-bottom: 5px;
@@ -58,7 +60,7 @@
     padding: 2px;
     margin-bottom: 50px;
     border-radius: 4px;
-    font-size: 0.7em;
+    font-size: 0.75em;
 }
 
 .Low {
@@ -77,4 +79,19 @@
   background-color: red;
   color: white;
 }
+
+.button3 {
+    background-color: #727272;
+    size: 2.5px;
+    width: 20px;
+    height: 25px;
+    color: rgb(0, 0, 0);   
+    border-radius: 2px;
+    padding: 2px;
+  }
+
+  .title {
+    background-color: #c0c0c0;
+    color: #c0c0c0;
+  }
 </style>
