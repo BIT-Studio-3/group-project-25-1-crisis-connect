@@ -5,20 +5,31 @@
     export let location = "";
     export let requirements = "";
     export let urgency = "";
-    export let status = "";
+    export let status = ""; 
+    export let updateStatus = () => {};
+    export let onRemove = () => {}; // add this   
 </script>
 
 <div class="card_container">
     <ul>
         <div class="card_header">       
         <p class="card_title">{title}</p>
-        <p class="id-box">Id: {id}</p>
+        <p class="id-box {urgency}">Id: {id}</p>
         </div>               
         <p>Date: {postDate}</p>
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>
         <p>Urgency: {urgency}</p>
-        <p>Status: {status}</p>   
+       <label>
+        Status:
+          <select bind:value={status} on:change={() => updateStatus(id, status)}>
+            <option value="Not Assigned">Not Assigned</option>
+            <option value="Task Allocated">Task Allocated</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Task Completed">Task Completed</option>
+          </select>
+        </label><br><br>
+        <button class="button3" on:click={() => onRemove(id)} title="Delete Card?"><h3>X</h3></button>   
     </ul>
 </div>
 
@@ -37,7 +48,7 @@
 }
  
 .card_title {
-    color: rgb(200, 200, 52);
+    color: rgb(255, 255, 255);
     display: flex;
     font-size: 20px;
     padding-bottom: 5px;
@@ -58,6 +69,48 @@
     padding: 2px;
     margin-bottom: 50px;
     border-radius: 4px;
-    font-size: 0.7em;
+    font-size: 0.75em;
 }
+
+.Low {
+  background-color: white;
+}
+
+.Moderate {
+  background-color: yellow;
+}
+
+.High {
+  background-color: orange;
+}
+
+.Critical {
+  background-color: red;
+  color: white;
+}
+
+.button3 {
+    background-color: #727272;
+    size: 2.5px;
+    width: 20px;
+    height: 25px;
+    color: rgb(0, 0, 0);   
+    border-radius: 2px;
+    padding: 2px;
+  }
+
+  .title {
+    background-color: #c0c0c0;
+    color: #c0c0c0;
+  }
+
+  select{
+    color: #ffffff;
+    background-color: #00000000;
+  }
+
+  option {
+    color: #000;
+    background-color: #ffffff00;
+  }
 </style>
