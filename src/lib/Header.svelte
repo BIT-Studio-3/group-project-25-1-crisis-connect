@@ -1,167 +1,203 @@
-<svelte:head>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.11.0/dist/full.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</svelte:head>
+<script>
+  import { onMount } from 'svelte';
 
-<script> 
-  import { slide } from "svelte/transition";
-  let isSidebarOpen = false;
-  const toggleSidebar = () => isSidebarOpen = !isSidebarOpen;
-  // clickOutside.js
-  export function clickOutside(node, callback) {
-    const handleClick = event => {
-      if (!node.contains(event.target)) {
-        callback(); // You decide what to do
-      }
-    };
-  
-    document.addEventListener('click', handleClick, true);
-  
-    return {
-      destroy() {
-        document.removeEventListener('click', handleClick, true);
-      }
-    };
+  let sidebarOpen = false;
+
+  let sidebar;
+  let hamburger;
+
+  function toggleSidebar() {
+    sidebarOpen = !sidebarOpen;
   }
-  
+
+  function closeSidebar() {
+    sidebarOpen = false;
+  }
+
+  function onSelectChange(event) {
+    const url = event.target.value;
+    if (url) {
+      window.location.href = url;
+      closeSidebar();
+    }
+  }
+
+  function handleClickOutside(event) {
+    if (
+      sidebarOpen &&
+      sidebar &&
+      hamburger &&
+      !sidebar.contains(event.target) &&
+      !hamburger.contains(event.target)
+    ) {
+      closeSidebar();
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  });
 </script>
 
-<section class="border">
-
-   <!-- Sidebar Container -->
-   <img src = "/Images/logo.png" alt = "Connect Criss logo"/>
-    <div class="relative">
-      <!-- Sidebar Toggle Button -->
-    <button 
-    class="w-10 h-10 m-1 absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white  flex items-center justify-center overflow-hidden"
+<div class="layout">
+  <button 
+  class="hamburger"
+  class:hidden={sidebarOpen}
+  aria-label="Toggle menu"
     on:click={toggleSidebar}
-    aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
-    >
-    {#if isSidebarOpen}
-    <!-- Close Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current sidebar-button open">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-    {:else}
-    <!-- Menu Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-6 w-6 stroke-current sidebar-button">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-    {/if}
+    bind:this={hamburger}
+  >
+    ☰
   </button>
-  
-  <!-- Sidebar Content with Slide Transition -->
-  {#if isSidebarOpen}
-  <div
-    transition:slide
-    use:clickOutside={() => isSidebarOpen = false} 
-    class="sidebar" flex flex-col items-center>
-   
-    <h2 class="text-xl font-semibold mb-4">Live Data</h2>
-    <ul class="space-y-2">
-      <!--<div class="container">-->
-        <select class="container" onchange="if(this.value) window.location.href=this.value">
-          <option value="/weather_reports_page">Weather Reports</option>
-          <option value="/seismic_reports_page">Seismic Activity</option>
-          <option value="/road_conditions_page">Road Conditions</option>
-          <option value="/volcanic_activity_page">Volcanic Activity</option>
-          <option value="/fire_and_emergency_page">Fire and Emergency Reports</option>
-          <option value="/rss">RSS Feed</option>
-        </select>      
-    </ul>
-    <h2 class="text-xl font-semibold mt-6 mb-4">Reports</h2>
-    <ul class="space-y-2">
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded no-underline" href="/hazards" on:click={() => isSidebarOpen = false}>Hazard Form</a></li>
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/damage_form" on:click={() => isSidebarOpen = false}>Damage Form</a></li>
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/alert_system" on:click={() => isSidebarOpen = false}>Post an Alert</a></li>
+
+  <aside class="sidebar" class:open={sidebarOpen} bind:this={sidebar}>
+    <img src="/Images/logo.png" alt="Crisis Connect logo" class="logo" />
+
+    <h2>Live Data</h2>
+    <select class="dropdown" on:change={onSelectChange}>
+      <option value="" disabled selected>Select Live Data</option>
+      <option value="/weather_reports_page">Weather Reports</option>
+      <option value="/seismic_reports_page">Seismic Activity</option>
+      <option value="/road_conditions_page">Road Conditions</option>
+      <option value="/volcanic_activity_page">Volcanic Activity</option>
+      <option value="/rss">RSS Feed</option>
+    </select>
+
+    <h2>Reports</h2>
+    <ul>
+      <li><a href="/hazards" class="sidebar-link" on:click={closeSidebar}>Hazard Form</a></li>
+      <li><a href="/damage_form" class="sidebar-link" on:click={closeSidebar}>Damage Form</a></li>
+      <li><a href="/alert_system" class="sidebar-link" on:click={closeSidebar}>Post an Alert</a></li>
     </ul>
 
-    <h2 class="text-xl font-semibold mt-6 mb-4">Contact</h2>
-    <ul class="space-y-2">
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/contact_page" on:click={() => isSidebarOpen = false}>Contact Services</a></li>
-      <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/task_cards" on:click={() => isSidebarOpen = false}>Task Cards</a></li>
-      <!-- <li><a class="btn  btn-secondary w-full px-4 py-2 text-white bg-blue-600 hover:bg-blue-100 rounded" href="/developer_contact" >Contact us "the developers"</a></li> -->
-
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="/contact_page" class="sidebar-link" on:click={closeSidebar}>Contact Services</a></li>
+      <li><a href="/task_cards" class="sidebar-link" on:click={closeSidebar}>Task Cards</a></li>
     </ul>
-  </div>
-  {/if}
+  </aside>
+
+  <main class="main-content">
+    <slot />
+  </main>
 </div>
-  
-</section>
 
 <style>
-  h2{
-    font-size: 30px;
-  }
-  select{
-    color: black;
-  }
-
-  section
-  {
+  .layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:#678994;
-    padding: 0.5em;
-    flex-direction:row-reverse;
-    border: 2px solid #2e8bc0  ;
-  }@media only screen and (max-width: 400px) {
-    section {
-      flex-direction:row-reverse;
-      justify-content: space-between;
-      align-items : center;
-      padding: 0.2 em;
-    }
+    height: 100vh;
+    overflow: hidden;
   }
 
-  img { /* image float right side */
-    width: 80px;
-    height: auto;
-  
-    text-align: center;
-  }
-  /* Sidebar styles */
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: auto;
-    min-height: 100%;
+    width: 300px;
+    padding: 1rem;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.192);
+    background-color: #070707b7;
     overflow-y: auto;
-    width: 20rem; /* w-64 */
-    background-color: #74a7d5; /* Darker base color */
-    background: linear-gradient(to right, #73a5f7, #5e6c84); /* blue → purple → pink */
-    color: rgb(118, 5, 5);
-    padding-left: 0rem;
-    border-radius: 0px;
-    box-shadow: 10px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    transition: transform rgba(141, 19, 19, 0)0.3s ease;
   }
 
-  /* Sidebar button */
-  .sidebar-button {
-    transition: transform 0.3s ease-in-out;
+  .logo {
+    width: 80px;
+    margin-bottom: 1rem;
   }
 
-  .sidebar-button.open {
-    transform: rotate(180deg);
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: white;
   }
-  .container {
-        padding-left: 20px;
-        padding-right: 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height:  40px;
-        color: #2e8bc0;
-      
+
+  .dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+  }
+  .dropdown option:checked {
+  background-color: #e0e0e0;
+  color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+  .hidden {
+    display: none;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: row;
     }
-    ul {
-      background-color: transparent;
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      transform: translateX(-100%);
+      z-index: 1000;
     }
-    li {
-      border-color: antiquewhite;
+
+    .sidebar.open {
+      transform: translateX(0);
     }
-    
-  </style>
+
+    .hamburger {
+      display: block;
+    }
+    .hamburger.hidden {
+      display: none;
+    }
+
+    .main-content {
+      padding: 1rem;
+    }
+  }
+</style>
