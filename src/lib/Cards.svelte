@@ -5,8 +5,9 @@
     export let location = "";
     export let requirements = "";
     export let urgency = "";
-    export let status = "";
-    export let onRemove = () => {}; // add this
+    export let status = ""; 
+    export let updateStatus = () => {};
+    export let onRemove = () => {}; // add this   
 </script>
 
 <div class="card_container">
@@ -19,7 +20,15 @@
         <p>Location: {location}</p> 
         <p>Requirements: {requirements}</p>
         <p>Urgency: {urgency}</p>
-        <p>Status: {status}</p><br>
+       <label>
+        Status:
+          <select bind:value={status} on:change={() => updateStatus(id, status)}>
+            <option value="Not Assigned">Not Assigned</option>
+            <option value="Task Allocated">Task Allocated</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Task Completed">Task Completed</option>
+          </select>
+        </label><br><br>
         <button class="button3" on:click={() => onRemove(id)} title="Delete Card?"><h3>X</h3></button>   
     </ul>
 </div>
@@ -93,5 +102,15 @@
   .title {
     background-color: #c0c0c0;
     color: #c0c0c0;
+  }
+
+  select{
+    color: #ffffff;
+    background-color: #00000000;
+  }
+
+  option {
+    color: #000;
+    background-color: #ffffff00;
   }
 </style>

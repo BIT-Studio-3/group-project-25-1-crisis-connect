@@ -36,6 +36,12 @@
   function removeCardById(targetId) {
   cards = cards.filter(card => card.id !== targetId);
   }
+
+  function updateStatus(idToUpdate, newStatus) {
+  cards = cards.map(card =>
+    card.id === idToUpdate ? { ...card, status: newStatus } : card
+  );
+}
   
 </script>
 
@@ -55,6 +61,7 @@
         urgency={card.urgency}
         status={card.status}
         onRemove={removeCardById}
+        updateStatus={updateStatus}
       />
       
     {/each}
@@ -118,6 +125,7 @@
             </select>
 
             <label for="status">Status</label>
+            
             <select required bind:value={status}>
               <option value="Not Assigned">Not Assigned</option>
               <option value="Task Allocated">Task Allocated</option>
